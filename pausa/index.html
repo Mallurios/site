@@ -101,6 +101,17 @@
   .r-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:58px;float:left;line-height:.9;padding:6px 10px 0 0;color:#C2465C;font-style:italic}
   .r-body blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;line-height:1.4;color:var(--paper);border-left:2px solid #C2465C;padding:4px 0 4px 18px;margin:26px 0}
   .box{border-radius:18px;padding:22px;margin-top:22px}
+  .eb .stub span:last-child{font-weight:600}
+  .box.eb-box{background:var(--paper);color:var(--paper-ink)}
+  .box.eb-box .label{color:var(--wine)}
+  .box.eb-box h3{color:var(--paper-ink)}
+  .box.eb-box p{color:#5E5856;font-size:14.5px}
+  .box.eb-box .btn{margin-top:12px}
+  .box.eb-box .btn.ghost{color:var(--paper-ink);border-color:#BDB5AE}
+  .eb-caps{margin:6px 0 12px 20px;color:var(--paper-ink);font-size:14px;line-height:1.55}
+  .eb-caps li{margin-bottom:3px}
+  .eb-inc{margin-top:6px}
+  .eb-fine{font-size:12px!important;text-align:center;margin-top:8px;color:#7A726E!important}
   .box h3{font-size:21px;font-style:italic;margin:8px 0 10px}
   .box.vida{background:var(--blue);color:var(--paper-ink)}
   .box.vida p{color:var(--blue-ink);font-size:14.5px}
@@ -354,6 +365,9 @@
     <p>Escolha um tema ou leia na ordem que fizer sentido para você hoje.</p>
     <div class="chips" id="chips"></div>
     <div id="list"></div>
+    <div class="sec"><h3>Para aprofundar</h3></div>
+    <p>E-books com o passo a passo da TCC, exercícios e estudos, para ler no seu ritmo.</p>
+    <div id="ebList"></div>
   </section>
 
   <!-- TCC -->
@@ -483,11 +497,11 @@ body:[
 '>Autoestima é a soma das vezes em que você não se abandonou.',
 'O contrário também é verdade. Cada vez que você engole o que sente para não incomodar, ou se compara até se diminuir, a mensagem que fica é a de que você vem depois. E ninguém se sente valiosa vindo sempre depois.',
 'A boa notícia é que isso se treina. Não com frases de efeito, mas com atitudes pequenas e repetidas que mostram para você mesma que dá para confiar em você.'],
-vida:'Mulheres com uma autoestima mais firme não deixam de sentir insegurança. Elas só deixam de tomar decisões a partir dela. Isso aparece na escolha do parceiro, no valor que cobram pelo próprio trabalho e no quanto conseguem descansar sem culpa.',
+vida:'Ter uma autoestima mais firme não significa deixar de sentir insegurança. Significa não deixar que ela tome as decisões por você. Isso aparece na escolha do parceiro, no valor que cobram pelo próprio trabalho e no quanto conseguem descansar sem culpa.',
 pr:['Faça hoje uma promessa pequena para você e cumpra. Pode ser beber água, dormir mais cedo ou sair dez minutos.','Quando se pegar se comparando, troque por: o que eu admiro nela que eu posso cultivar em mim?','À noite, anote uma situação em que você se escolheu.'],
 q:'Qual foi a última vez que você se escolheu, mesmo com medo?'},
 
-{id:'voz',d:'rotulo',cat:'autoestima',min:5,t:'A voz que te critica não é a sua',s:'Entenda de onde vem a cobrança interna e como diminuir o volume dela.',
+{id:'voz',d:'rotulo',cat:'autoestima',min:5,t:'A voz que te critica não é a mais verdadeira',s:'Entenda de onde vem a cobrança interna e como diminuir o volume dela.',
 body:[
 'Muitas mulheres carregam uma voz interna muito dura. Ela diz que você poderia ter feito melhor, que está exagerando, que não é para tanto. Ela fala com uma certeza tão grande que parece a verdade.',
 'Mas essa voz tem história. Muitas vezes ela é a reunião de frases que você ouviu na infância, de exigências da escola, de comparações em casa. Em algum momento ela foi útil: se você se cobrasse antes, talvez ninguém mais precisasse cobrar. Ela nasceu para te proteger da rejeição.',
@@ -505,7 +519,7 @@ body:[
 '>Você não precisa estar exausta para merecer descanso.',
 'Autocuidado de verdade é base, não prêmio. É o que te sustenta para dar conta da vida, e não o que você ganha por ter dado conta dela. Ele também não precisa ser caro ou bonito. Às vezes é dizer não, almoçar sentada, ir ao médico que você adia há meses.',
 'Quando você muda essa lógica, o cuidado deixa de ser um evento raro e passa a ser um jeito de viver.'],
-vida:'Quem só se cuida no limite costuma adoecer mais, ficar mais irritada e se sentir mais sozinha. O cuidado constante, mesmo em doses pequenas, melhora o sono, a paciência e a capacidade de lidar com o trabalho e com as relações.',
+vida:'Quando o cuidado só aparece no limite, ele chega tarde: o cansaço já virou irritação, o sono já piorou e a paciência já acabou. Cuidar de você em doses pequenas e frequentes é uma forma de não deixar chegar a esse ponto.',
 pr:['Escolha um cuidado de 10 minutos e coloque na agenda como compromisso.','Liste três cuidados básicos que você vem adiando, como consultas e exames.','Observe a culpa quando ela aparecer e não deixe que ela decida por você.'],
 q:'O que você acha que precisa fazer antes de merecer cuidado?'},
 
@@ -516,7 +530,7 @@ body:[
 '>Descanso não é o intervalo da vida. Também é vida.',
 'Descansar é uma habilidade, e como toda habilidade, se aprende. No começo vai ser desconfortável. A culpa vai aparecer, e tudo bem. O objetivo não é não sentir culpa, é não deixar que ela comande.',
 'Comece com pausas curtas e intencionais. Avise a si mesma: agora eu estou descansando. Isso ajuda o cérebro a entender que parar também é uma escolha válida.'],
-vida:'O descanso de qualidade melhora a concentração, a regulação emocional e a criatividade. Mulheres que conseguem descansar sem culpa costumam render melhor no trabalho e ter menos explosões em casa.',
+vida:'Quando a cabeça não desliga, o descanso não acontece de verdade, mesmo com o corpo parado. Pausas pequenas e intencionais ajudam a recuperar a energia que o dia levou, e deixam você com mais disponibilidade para o trabalho e para as pessoas que ama.',
 pr:['Escolha um momento do dia para uma pausa de 15 minutos sem celular.','Quando a culpa vier, diga em voz baixa: eu também sou responsável por mim.','Perceba como você se sente depois e anote.'],
 q:'O que você sente que vai acontecer se você parar?'},
 
@@ -525,8 +539,9 @@ body:[
 'Na dependência emocional, o outro passa a ser o centro da sua estabilidade. O seu humor depende da mensagem que ele mandou ou não mandou. O seu dia muda se ele está distante. E você começa a fazer de tudo para não perder aquela pessoa, até deixar de fazer coisas por você.',
 'Muitas vezes isso é confundido com amor intenso. Mas amor não costuma vir acompanhado de tanta ansiedade, de medo constante de abandono, de pedir desculpas por tudo, de se diminuir para caber.',
 '>Amor não deveria custar a sua paz.',
-'A dependência emocional quase sempre tem raízes antigas. Ela aparece em quem aprendeu cedo que o afeto era incerto, que precisava se esforçar para ser vista, que ficar sozinha era perigoso. Então o adulto repete o que a criança aprendeu para sobreviver.',
-'Reconhecer isso não é motivo de vergonha. É o primeiro passo para construir relações em que você não precisa se abandonar para ser amada.'],
+'A dependência emocional costuma ter raízes antigas. Ela aparece em quem aprendeu cedo que o afeto era incerto, que precisava se esforçar para ser vista, que ficar sozinha era perigoso. Então o adulto repete o que a criança aprendeu para sobreviver.',
+'Reconhecer isso não é motivo de vergonha. É o primeiro passo para construir relações em que você não precisa se abandonar para ser amada.',
+'Um cuidado importante: se a relação tem agressões, ameaças, controle ou humilhação, isso não é dependência emocional sua para resolver sozinha. É violência, e existe ajuda. Ligue 180, a Central de Atendimento à Mulher, ou 190 em caso de emergência.'],
 vida:'A dependência emocional afeta muito além do relacionamento. Ela consome a energia que iria para o trabalho, afasta amizades, diminui a autoestima e pode fazer você permanecer em situações que te fazem mal por medo de ficar só.',
 pr:['Observe quantas decisões da sua semana foram tomadas pensando em não desagradar alguém.','Retome uma atividade que era sua antes da relação, mesmo que pequena.','Converse com uma amiga de confiança sobre o que você está percebendo.'],
 q:'O que você tem medo que aconteça se você parar de se esforçar tanto para ser amada?'},
@@ -538,7 +553,7 @@ body:[
 '>Quem aprende a ficar consigo não aceita qualquer companhia.',
 'Quando você constrói uma boa relação com a sua própria presença, as relações deixam de ser uma necessidade desesperada e passam a ser uma escolha. Você escolhe ficar porque quer, e não porque tem medo de ficar sem.',
 'Isso não acontece de um dia para o outro. Começa com pequenas experiências de estar com você e perceber que você sobrevive, e que às vezes até gosta.'],
-vida:'Mulheres que conseguem ficar bem sozinhas colocam limites com mais facilidade, escolhem melhor seus parceiros e saem mais cedo de relações que machucam, porque a solidão deixa de ser uma ameaça.',
+vida:'Quando ficar sozinha deixa de ser uma ameaça, fica mais fácil colocar limites, escolher com calma e sair de situações que machucam, porque o medo da solidão para de decidir por você.',
 pr:['Marque um encontro com você esta semana: um café, um filme, uma caminhada.','Durante esse tempo, observe o que sente sem pegar o celular.','Escreva uma coisa que você descobriu sobre você nesse momento.'],
 q:'Como era estar sozinha quando você era criança?'},
 
@@ -547,9 +562,9 @@ body:[
 'Você entrega, entrega, entrega, e mesmo assim sente que não está fazendo o suficiente. Um elogio dura pouco, uma crítica dura dias. E qualquer erro parece uma ameaça ao seu lugar.',
 'Isso costuma acontecer quando o seu valor pessoal se mistura com o seu desempenho. Aí o trabalho deixa de ser o que você faz e passa a ser quem você é. E toda tarefa vira uma prova de que você merece estar ali.',
 '>O seu valor não sobe e desce junto com as suas entregas.',
-'Esse é um terreno fértil para a ansiedade e para o burnout. Porque se o valor depende de produzir, parar vira perigo, errar vira tragédia e dizer não vira impossível.',
+'Esse é um terreno fértil para a ansiedade e para o esgotamento. Porque se o valor depende de produzir, parar vira perigo, errar vira tragédia e dizer não vira impossível. E vale lembrar: nem todo esgotamento é um problema seu para resolver sozinha. A carga de trabalho, a falta de reconhecimento e um ambiente injusto também pesam, e muito.',
 'Separar quem você é do que você entrega não significa trabalhar menos ou se importar menos. Significa trabalhar a partir de um lugar mais seguro, e não do medo de não ser suficiente.'],
-vida:'Quando o trabalho define todo o seu valor, ele invade o fim de semana, o sono e as relações. Separar essas coisas devolve espaço para a vida pessoal e, curiosamente, costuma melhorar o próprio desempenho.',
+vida:'Quando o trabalho define todo o seu valor, ele invade o fim de semana, o sono e as relações. Separar essas coisas devolve espaço para a vida pessoal e tira do trabalho o peso de provar, todos os dias, quem você é.',
 pr:['Liste três qualidades suas que não têm nada a ver com trabalho.','Defina um horário para encerrar o dia e respeite por uma semana.','Quando errar, descreva o erro como um fato, sem adjetivos sobre você.'],
 q:'Quem você seria se não tivesse que provar nada a ninguém?'},
 
@@ -565,6 +580,69 @@ pr:['Na sexta, anote as três prioridades da segunda e feche o caderno.','Crie u
 q:'O que exatamente pesa quando você pensa na segunda-feira?'}
 ];
 
+
+/* ---------- materiais (e-books) ---------- */
+const WA_N='5511958234734';
+const EB=[
+{id:'amar',cat:'dependencia',t:'Amar sem se perder',k:'Guia de TCC sobre dependência emocional',pg:59,
+ s:'Para entender por que você se perde nas relações e começar a construir um jeito mais seguro de amar.',
+ r:'Um guia para quem sente que a própria paz depende da mensagem do outro. Com a Terapia Cognitivo-Comportamental, você entende como pensamentos, crenças antigas e o medo do abandono se ligam, por que o mesmo padrão se repete e como atravessar a vontade de checar, mandar mensagem ou pedir garantias. Termina com limites sem culpa e com a construção de uma vida que seja sua.',
+ c:['Amor ou dependência?','O que acontece entre o fato e a angústia','A raiz do medo de ser abandonada','Por que eu sempre caio na mesma história?','Quando um silêncio vira um fim','O alívio que aprisiona','Atravessar a vontade sem ser engolida por ela','Limites sem culpa','Uma vida que seja sua','Para os dias difíceis']},
+{id:'fim',cat:'dependencia',t:'Depois do fim',k:'Guia de TCC para atravessar o término',pg:50,
+ s:'Por que o fim dói tanto, como lidar com a vontade de voltar e como não repetir o padrão no próximo amor.',
+ r:'Um guia para quem está atravessando um término. Explica o que a pesquisa mostra sobre apego e luto da relação, ajuda a lidar com a ruminação e com a vontade de checar as redes, a olhar a relação por inteiro e a reconstruir a rotina. Complementa o Amar sem se perder.',
+ c:['Por que o fim dói tanto','O luto da relação','Ruminação e checagem','Olhar a relação por inteiro','Os pensamentos depois do fim','A vontade de voltar','Reconstruir a rotina','Antes de um novo amor']},
+{id:'voz',cat:'autoestima',t:'A voz que te critica',k:'Guia de TCC para fortalecer a autoestima',pg:58,
+ s:'Como a baixa autoestima se forma, por que ela se mantém e como construir uma visão mais justa de você.',
+ r:'Organizado a partir do modelo de baixa autoestima de Melanie Fennell, usado na TCC. Você entende o que é autoestima (e o que ela não é), identifica a sua linha de base e as regras que você criou para viver, aprende a responder à autocrítica em vez de obedecer a ela e conhece a autocompaixão a partir da pesquisa.',
+ c:['O que é autoestima, e o que ela não é','Como a baixa autoestima se mantém','A linha de base','As regras para viver','Previsões ansiosas e evitação','A voz que te critica','Autocompaixão','Uma nova linha de base']},
+{id:'lista',cat:'autoestima',t:'Se colocar na própria lista',k:'Guia de TCC para a autoestima no dia a dia',pg:50,
+ s:'Comparação, limites, perfeccionismo e autocuidado: práticas para construir autoestima nas escolhas de todos os dias.',
+ r:'Autoestima na prática, para quem cuida de tudo e de todos e fica por último. Trabalha a armadilha da comparação e a de agradar, limites e assertividade, perfeccionismo e o bom o suficiente, reconhecer o que você faz bem e o autocuidado como base, e não como recompensa.',
+ c:['Autoestima se constrói com ações','A armadilha da comparação','A armadilha de agradar','Limites e assertividade','Perfeccionismo e o bom o suficiente','Reconhecer o que você faz bem','Autocuidado como base','Manter o caminho']},
+{id:'cansada',cat:'trabalho',t:'Cansada de dar conta de tudo',k:'Guia de TCC para entender o burnout',pg:51,
+ s:'O que é burnout segundo a OMS, os sinais, as causas no trabalho e os pensamentos que esgotam.',
+ r:'Explica o burnout pela definição da Organização Mundial da Saúde e pela pesquisa de Christina Maslach, os sinais que merecem atenção e as seis áreas do trabalho que alimentam o esgotamento. Mostra os padrões de pensamento que tornam a pessoa mais vulnerável, a sobrecarga que se soma fora do trabalho e quando procurar ajuda.',
+ c:['O que é burnout','Os sinais do esgotamento','De onde vem o burnout','Os pensamentos que esgotam','Sempre disponível','A sobrecarga que se soma','Quando procurar ajuda','Meu mapa do esgotamento']},
+{id:'energia',cat:'trabalho',t:'Recuperar a energia',k:'Guia de TCC para se recuperar do esgotamento',pg:51,
+ s:'Práticas para desligar do trabalho, voltar a fazer o que faz bem, dormir melhor e colocar limites.',
+ r:'Um guia sobre recuperação, com práticas da TCC e de estudos sobre recuperação do trabalho: desligar de verdade, voltar a fazer o que faz bem, cuidar do sono, organizar prioridades, colocar limites no trabalho e reescrever a autocobrança. Deixa claro que práticas individuais ajudam, mas não substituem mudanças no ambiente quando o problema está nele.',
+ c:['Recuperação não é luxo','Desligar do trabalho','Voltar a fazer o que faz bem','Cuidar do sono','Prioridades e problemas','Limites no trabalho','Reescrever a autocobrança','Manter a recuperação']}
+];
+const EB_OF={voz:'voz',espelho:'lista',recompensa:'lista',descanso:'energia',medo:'amar',sozinha:'amar',produtividade:'cansada',domingo:'energia'};
+const ebi=id=>EB.find(e=>e.id===id);
+const waEb=e=>`https://wa.me/${WA_N}?text=${encodeURIComponent('Olá Mallu! Vim pelo app Pausa e quero o e-book "'+e.t+'".')}`;
+function ebCard(e){
+  return `<div class="ticket ${CATS[e.cat].c} eb" onclick="openEB('${e.id}')">
+    <div class="top"><div class="label">E-book · ${CATS[e.cat].n}</div><h3>${e.t}</h3><p>${e.s}</p><svg class="orbit"><use href="#orb"/></svg></div>
+    <div class="stub"><span>${e.pg} páginas · PDF e ePub</span><span>Ver resumo →</span></div></div>`;
+}
+function renderEbList(){
+  const list=EB.filter(e=>curCat==='todas'||curCat==='inicio'||e.cat===curCat);
+  document.getElementById('ebList').innerHTML=list.map(ebCard).join('');
+}
+function openEB(id){
+  const e=ebi(id);
+  document.getElementById('reader').innerHTML=`
+    <div class="r-head"><div class="label">E-book · ${CATS[e.cat].n}</div><h1>${e.t}</h1><p class="sub">${e.s}</p>
+      <div class="r-meta"><img src="mallu.jpg" alt=""><span>Mallu Rios</span><span>·</span><span>${e.pg} páginas</span></div></div>
+    <div class="r-body"><p>${e.r}</p></div>
+    <div class="box eb-box"><div class="label">${e.k}</div><h3>O que tem dentro</h3>
+      <ol class="eb-caps">${e.c.map(x=>`<li>${x}</li>`).join('')}</ol>
+      <p class="eb-inc">${e.id==='amar'?'Os capítulos trazem explicação, casos fictícios e um exercício para preencher em cada um.':'Cada capítulo traz explicação, o que dizem os estudos, um ponto de ensino, um caso fictício, práticas para o dia a dia e um exercício para preencher.'} Em PDF (para ler ou imprimir) e ePub (para celular, Kindle e Apple Livros).</p>
+      <a class="btn wa full" target="_blank" rel="noopener" href="${waEb(e)}">Quero este e-book</a>
+      <p class="eb-fine">O botão abre uma conversa comigo no WhatsApp.</p></div>
+    <p class="note">Os e-books são materiais educativos e de autoconhecimento e não substituem a psicoterapia. Em sofrimento intenso, ligue para o <b>CVV 188</b>.<br><span class="crp">Mallu Rios · Psicóloga · CRP 06/234141</span></p>`;
+  if(!document.getElementById('v-read').classList.contains('on')) lastView=document.querySelector('.view.on').id.slice(2);
+  show('read');
+}
+function ebBox(rid){
+  const e=ebi(EB_OF[rid]);if(!e)return '';
+  return `<div class="box eb-box"><div class="label">Para aprofundar</div><h3>${e.t}</h3><p>${e.s}</p>
+    <p class="eb-inc">E-book de ${e.pg} páginas, com exercícios de TCC para fazer no seu ritmo.</p>
+    <button class="btn ghost full" onclick="openEB('${e.id}')">Ver o resumo do e-book</button>
+    <a class="btn wa full" target="_blank" rel="noopener" href="${waEb(e)}">Quero este e-book</a></div>`;
+}
 /* ---------- armazenamento seguro ---------- */
 const S={get(k,d){try{return JSON.parse(localStorage.getItem('vr_'+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem('vr_'+k,JSON.stringify(v))}catch(e){}}};
 let saved=S.get('saved',[]),read=S.get('read',[]),steps=S.get('steps',{}),notes=S.get('notes',{});
@@ -594,6 +672,7 @@ function renderHome(){
 function renderLib(){
   document.getElementById('chips').innerHTML=[['todas','Todas'],...Object.keys(CATS).map(k=>[k,CATS[k].n])].map(([k,n])=>`<button class="${k===curCat?'on':''}" onclick="curCat='${k}';renderLib()">${n}</button>`).join('');
   document.getElementById('list').innerHTML=R.map((r,i)=>[r,i]).filter(([r])=>curCat==='todas'||r.cat===curCat).map(([r,i])=>ticket(r,i)).join('');
+  renderEbList();
 }
 function renderSaved(){
   const el=document.getElementById('savedList');
@@ -621,6 +700,7 @@ function openR(id){
       <button class="btn ghost ${saved.includes(id)?'on':''}" onclick="toggleSave('${id}',this)">${saved.includes(id)?'Salva ✓':'Salvar'}</button>
       <button class="btn" onclick="markRead('${id}',this)">${read.includes(id)?'Lida ✓':'Marcar como lida'}</button>
     </div>
+    ${ebBox(id)}
     <div class="sec"><h3>Próxima leitura</h3></div>
     ${ticket(next,(i+1)%R.length)}
     <div class="cta"><div class="label">Atendimento</div><h3>Quer olhar para isso com acompanhamento?</h3><p>A leitura abre o caminho. A terapia ajuda a percorrê-lo com você.</p>
@@ -859,6 +939,7 @@ function fromHash(){
   if(h==='#teste')return go('quiz');
   if(h==='#respirar')return go('breath');
   if(h==='#checkin')return go('checkin');
+  const me=h.match(/^#ebook-([a-z]+)$/);if(me&&ebi(me[1])){lastView='lib';renderLib();return openEB(me[1])}
   const m=h.match(/^#leitura-([a-z]+)$/);if(m&&idx(m[1])>=0){lastView='home';openR(m[1])}
 }
 
