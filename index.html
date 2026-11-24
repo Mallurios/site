@@ -7,20 +7,20 @@
 <meta name="description" content="Mallu Rios, psicóloga (CRP 06/234141). Terapia online com TCC para adultos e adolescentes: ansiedade, autoestima, autocobrança, relacionamentos e esgotamento emocional.">
 <title>Mallu Rios · Psicóloga</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 /* VOICE: acolhedora, séria e íntima — uma psicóloga, não uma marca de bem-estar
    IDEA: a sala de atendimento à noite: luz baixa, poltrona vinho, uma conversa que começa
    PICTURE: o retrato da Mallu na poltrona vinho, grande, saindo do escuro, com o convite ao lado
-   COLOUR and TYPE: quase-preto quente dominante, vinho #7A1F30 de apoio, azul-névoa #BCD3E6 como acento; Playfair Display itálico + Poppins (as mesmas do app Pausa)
+   COLOUR and TYPE: quase-preto quente dominante, vinho #2A2622 de apoio, azul-névoa #2C4A60 como acento; Lora itálico + Poppins (as mesmas do app Pausa)
    LAYOUT: cabeçalho fixo; hero em duas colunas; faixas alternando escuro e papel; perguntas em acordeão; rodapé com CRP */
-:root{color-scheme:dark;--bg:#0D0B0C;--card:#171415;--ink:#F2EEE8;--soft:#A9A29E;--line:#2C2627;--wine:#7A1F30;--wine2:#C2465C;--rose:#D7A3AD;--mist:#BCD3E6;--paper:#F2EEE8;--pink:#1D1A1B;--green:#25D366}
-:root[data-theme=light],:root[data-theme=dark]{color-scheme:dark}
+:root{color-scheme:light;--bg:#FBF6EA;--card:#FFFFFF;--ink:#2A2622;--soft:#6B6259;--line:#E6DCC6;--wine:#2A2622;--wine2:#A0740C;--rose:#A0740C;--mist:#2C4A60;--paper:#F5C518;--pink:#2A2622;--green:#F5C518}
+:root[data-theme=light],:root[data-theme=dark]{color-scheme:light}
 *{box-sizing:border-box;min-width:0;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{background:var(--bg);color:var(--ink);font:16px/1.65 Poppins,system-ui,sans-serif;overflow-x:clip}
 a{color:inherit}
-h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.08;text-wrap:balance}
+h1,h2,h3{font-family:'Lora',Georgia,serif;font-weight:600;line-height:1.08;text-wrap:balance}
 h2{font-size:clamp(32px,4.4vw,46px);font-style:italic}
 h3{font-size:22px;font-style:italic;line-height:1.2}
 p{color:var(--soft);max-width:66ch}
@@ -30,42 +30,42 @@ p{color:var(--soft);max-width:66ch}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 15px Poppins,sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,background .2s}
 .btn:hover{transform:translateY(-1px)}
 .btn.wa{background:var(--green);color:#0B2A17}
-.btn.ghost{border:1px solid #4A4244;color:var(--ink);background:transparent}
+.btn.ghost{border:1px solid #CFC3AC;color:var(--ink);background:transparent}
 .btn svg{width:20px;height:20px}
 a:focus-visible,button:focus-visible{outline:3px solid var(--mist);outline-offset:3px}
 
 /* header */
-header{position:sticky;top:0;z-index:20;background:rgba(13,11,12,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+header{position:sticky;top:0;z-index:20;background:rgba(251,246,234,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(42,38,34,.1)}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(5vw,18px);max-width:1280px;margin:0 auto}
-.logo{font:italic 600 24px 'Playfair Display',serif;text-decoration:none;white-space:nowrap}
+.logo{font:italic 600 24px 'Lora',serif;text-decoration:none;white-space:nowrap}
 .logo span{color:var(--wine2)}
 nav.top{display:flex;gap:4px;flex-wrap:wrap}
-nav.top a{font-size:14px;text-decoration:none;color:#D9D2CE;padding:10px 12px;border-radius:99px}
-nav.top a:hover{background:#1E1A1B}
+nav.top a{font-size:14px;text-decoration:none;color:#4A433C;padding:10px 12px;border-radius:99px}
+nav.top a:hover{background:#F3ECDC}
 .hd .btn{min-height:44px;padding:0 18px;font-size:14px}
 
 /* hero */
 .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:center;padding-top:clamp(32px,5vw,64px)}
 .hero h1{font-size:clamp(40px,5.6vw,64px);font-style:italic;margin-bottom:20px}
 .hero h1 em{color:var(--rose);font-style:italic}
-.hero p.lead{font-size:18px;color:#CFC8C3;margin-bottom:28px}
+.hero p.lead{font-size:18px;color:#4A433C;margin-bottom:28px}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
 .id{display:flex;align-items:center;gap:14px;margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:14px;color:var(--soft)}
 .id b{color:var(--ink);font-weight:600;display:block}
-.photo{position:relative;aspect-ratio:720/900;border-radius:220px 220px 24px 24px;overflow:hidden;background:#1a1414;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.photo{position:relative;aspect-ratio:720/900;border-radius:220px 220px 24px 24px;overflow:hidden;background:#F3ECDC;box-shadow:0 30px 80px rgba(42,38,34,.92)}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:center 12%;display:block}
-.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(13,11,12,.65))}
-.badge{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(23,20,21,.86);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:12px 16px;font-size:13px;color:#E8E2DD}
-.badge b{display:block;font:italic 600 18px 'Playfair Display',serif;color:#fff}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(251,246,234,.65))}
+.badge{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(255,255,255,.86);backdrop-filter:blur(8px);border:1px solid rgba(42,38,34,.1);border-radius:16px;padding:12px 16px;font-size:13px;color:#2A2622}
+.badge b{display:block;font:italic 600 18px 'Lora',serif;color:#fff}
 
 /* faixa de frases */
 .strip{background:var(--wine);color:#FBF4F2;padding:22px max(5vw,18px)}
-.strip p{max-width:none;margin:0 auto;text-align:center;color:#FBF4F2;font:italic 500 clamp(19px,2.4vw,26px)/1.35 'Playfair Display',serif}
+.strip p{max-width:none;margin:0 auto;text-align:center;color:#FBF4F2;font:italic 500 clamp(19px,2.4vw,26px)/1.35 'Lora',serif}
 
 /* sobre */
 .two{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,80px);align-items:start}
 .two p+p{margin-top:16px}
-.quote{font:italic 500 24px/1.4 'Playfair Display',serif;color:var(--paper);border-left:2px solid var(--wine2);padding-left:18px;margin-top:28px;max-width:30ch}
+.quote{font:italic 500 24px/1.4 'Lora',serif;color:var(--ink);border-left:2px solid var(--wine2);padding-left:18px;margin-top:28px;max-width:30ch}
 
 /* atendimento (papel) */
 .paper{background:var(--paper);color:var(--pink)}
@@ -73,10 +73,10 @@ nav.top a:hover{background:#1E1A1B}
 .paper .eyebrow{color:var(--wine)}
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
 .step{background:#fff;border-radius:20px;padding:24px;border:1px solid #E5DED6}
-.step i{display:block;font:italic 600 34px 'Playfair Display',serif;color:var(--wine);margin-bottom:8px;font-style:italic}
+.step i{display:block;font:italic 600 34px 'Lora',serif;color:var(--wine);margin-bottom:8px;font-style:italic}
 .step h3{color:var(--pink);margin-bottom:8px}
 .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.facts span{background:#E7EEF5;color:#22405A;font-size:14px;padding:8px 14px;border-radius:99px;white-space:nowrap}
+.facts span{background:#E7EEF5;color:#2C4A60;font-size:14px;padding:8px 14px;border-radius:99px;white-space:nowrap}
 
 /* temas */
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:36px}
@@ -88,22 +88,22 @@ nav.top a:hover{background:#1E1A1B}
 .pausa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:36px}
 .card{border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:10px;text-decoration:none;min-height:220px;transition:transform .2s}
 .card:hover{transform:translateY(-2px)}
-.card.w{background:var(--wine)}.card.w p{color:#EBD3D7}.card.w .eyebrow{color:#F0D5DA}
-.card.b{background:#DCE8F2;color:#1D1A1B}.card.b p{color:#22405A}.card.b .eyebrow{color:#22405A}
+.card.w{background:var(--wine)}.card.w p{color:#E9E1D2}.card.w .eyebrow{color:#F2D27A}
+.card.b{background:#DCE8F2;color:#1D1A1B}.card.b p{color:#2C4A60}.card.b .eyebrow{color:#2C4A60}
 .card .go{margin-top:auto;font-weight:600;font-size:15px}
 .card h3{font-size:28px}
 
 /* faq */
 .faq{margin-top:32px;border-top:1px solid var(--line)}
 details{border-bottom:1px solid var(--line)}
-summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font:italic 600 20px/1.3 'Playfair Display',serif}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font:italic 600 20px/1.3 'Lora',serif}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font:300 28px Poppins,sans-serif;color:var(--rose);transition:transform .2s}
 details[open] summary::after{transform:rotate(45deg)}
 details p{padding:0 0 22px}
 
 /* contato */
-.contact{background:linear-gradient(180deg,var(--bg),#1A0E12);text-align:center}
+.contact{background:linear-gradient(180deg,var(--bg),#F3E6C4);text-align:center}
 .contact h2{margin:0 auto 14px;max-width:18ch}
 .contact p{margin:0 auto 28px}
 .contact .cta-row{justify-content:center}
@@ -116,6 +116,36 @@ footer{border-top:1px solid var(--line);padding:28px max(5vw,18px);font-size:13p
 @media(max-width:560px){.steps,.grid{grid-template-columns:1fr}.hero h1{font-size:40px}.cta-row .btn{width:100%}}
 @media(prefers-reduced-motion:no-preference){.photo img{animation:in 1.2s ease both}@keyframes in{from{opacity:0;transform:scale(1.04)}}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ===== tema creme e amarelo (teste) ===== */
+html,body{background:var(--bg)!important;color:var(--ink)}
+*{text-transform:none!important;letter-spacing:normal!important}
+.ticket .stub span{font-size:13px!important;font-style:italic}
+.ticket .top p{border-left:none!important;padding-left:0!important}
+.ticket .stub{border-top:1.5px dashed rgba(42,38,34,.25)!important}
+.badge b,.badge strong{color:var(--ink)!important}
+:root{color-scheme:light}
+h1,h2,h3,h4{font-family:'Lora',Georgia,serif!important;font-style:normal!important;font-weight:500!important;letter-spacing:-.01em}
+body,p,a,button,li,span,input,textarea,label,dd,dt{font-family:'Lora',Georgia,serif}
+.label,.eyebrow,.k,.tb-r,.kicker{text-transform:none!important;letter-spacing:.01em!important;font-style:italic;font-weight:500!important;font-size:13.5px!important}
+.btn{text-transform:none!important;letter-spacing:.01em!important;font-family:'Lora',Georgia,serif!important;font-weight:600!important;font-size:15px!important}
+.logo{font-style:normal!important;font-family:'Lora',Georgia,serif!important;color:var(--ink)!important}
+.tb-r,.meta,.meta span{color:var(--soft)!important;text-transform:none!important;letter-spacing:.02em!important}
+.crp,.note b,.foot b,.foot .crp{color:var(--ink)!important}
+.sec a{text-transform:none!important;letter-spacing:0!important;font-size:14px!important;font-style:italic}
+
+.meta i{background:var(--line)!important}
+
+.btn.wa{background:#F5C518!important;color:#2A2622!important}
+.paper{background:#FFF4CC!important}
+.card.w{background:#E0533B!important}.card.w h3,.card.w p,.card.w .go{color:#fff!important}.card.w .eyebrow{color:#FFE9A8!important}.card.b{background:#3A6FD8!important}.card.b h3,.card.b p,.card.b .go{color:#fff!important}.card.b .eyebrow{color:#FFE9A8!important}
+.photo img{object-position:42% 12%!important}
+nav.top a:hover{background:#F3ECDC}
+.badge{color:#2A2622!important}
+.photo{box-shadow:0 20px 50px rgba(60,45,20,.15)!important}
+.contact{background:#F3E6C4!important}
+.ill{margin:22px 0 6px;border-radius:22px;overflow:hidden;aspect-ratio:16/9}.ill img{width:100%;height:100%;object-fit:cover;object-position:right center;display:block}.ill-arch{width:220px;height:290px;margin:0 auto 22px;border-radius:120px 120px 20px 20px;overflow:hidden}.ill-arch img{width:100%;height:100%;object-fit:cover;object-position:80% center;display:block}
+.photo img{object-position:center 10%!important}
 </style>
 </head>
 <body>
@@ -135,7 +165,7 @@ footer{border-top:1px solid var(--line);padding:28px max(5vw,18px);font-size:13p
   <section class="band" style="padding-bottom:clamp(48px,6vw,80px)">
     <div class="wrap hero">
       <div>
-        <div class="eyebrow">Psicóloga clínica · Terapia online</div>
+        <div class="eyebrow">Psicóloga clínica · Terapia online em português e espanhol</div>
         <h1>Para quem está <em>cansada de dar conta de tudo</em></h1>
         <p class="lead">Um espaço de escuta e acolhimento para entender o que você sente, aliviar o que não precisa ser só seu e construir uma relação mais gentil consigo mesma.</p>
         <div class="cta-row">
@@ -145,8 +175,8 @@ footer{border-top:1px solid var(--line);padding:28px max(5vw,18px);font-size:13p
         <div class="id"><div><b>Mallu Rios</b>Psicóloga · CRP 06/234141 · Terapia Cognitivo-Comportamental</div></div>
       </div>
       <div class="photo">
-        <img src="hero.jpg" alt="Mallu Rios, psicóloga, sentada em uma poltrona vinho, sorrindo">
-        <div class="badge"><b>Atendimento online</b>Para todo o Brasil</div>
+        <img src="/img/foto-centro.jpg" alt="Mallu Rios, psicóloga, sentada em uma poltrona vinho, sorrindo">
+        <div class="badge"><b>Atendimento online</b>Em português e espanhol</div>
       </div>
     </div>
   </section>
@@ -200,6 +230,7 @@ footer{border-top:1px solid var(--line);padding:28px max(5vw,18px);font-size:13p
     <div class="wrap">
       <div class="eyebrow">Conteúdos gratuitos</div>
       <h2>Para começar a cuidar de você hoje</h2>
+      <div class="ill"><img src="/img/girassol.jpg" alt=""></div>
       <div class="pausa">
         <a class="card w" href="/pausa/">
           <div class="eyebrow">App</div><h3>Pausa</h3>
@@ -233,6 +264,7 @@ footer{border-top:1px solid var(--line);padding:28px max(5vw,18px);font-size:13p
 
   <section class="band contact" id="contato">
     <div class="wrap">
+      <div class="ill-arch"><img src="/img/janela.jpg" alt=""></div>
       <div class="eyebrow">Vamos conversar?</div>
       <h2>O primeiro passo pode ser uma mensagem</h2>
       <p>Me conte um pouco do que você busca. Eu respondo explicando como funciona e os horários disponíveis.</p>
@@ -251,6 +283,7 @@ footer{border-top:1px solid var(--line);padding:28px max(5vw,18px);font-size:13p
     <span>Em crise, ligue 188 (CVV) ou 192 (SAMU)</span>
   </div>
 </footer>
+
 <script data-goatcounter="https://mallurios.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script>window.addEventListener('hashchange',function(){if(window.goatcounter&&goatcounter.count&&location.hash.length>1)goatcounter.count({path:location.pathname+location.hash})});</script>
 </body>

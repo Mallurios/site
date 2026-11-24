@@ -4,8 +4,8 @@
  "start_url": "/pausa/",
  "scope": "/pausa/",
  "display": "standalone",
- "background_color": "#0D0B0C",
- "theme_color": "#0D0B0C",
+ "background_color": "#FBF6EA",
+ "theme_color": "#FBF6EA",
  "lang": "pt-BR",
  "icons": [
   {
