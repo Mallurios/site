@@ -1,0 +1,23 @@
+{
+ "name": "Pausa · Mallu Rios",
+ "short_name": "Pausa",
+ "start_url": "/pausa/",
+ "scope": "/pausa/",
+ "display": "standalone",
+ "background_color": "#0D0B0C",
+ "theme_color": "#0D0B0C",
+ "lang": "pt-BR",
+ "icons": [
+  {
+   "src": "/pausa/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/pausa/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}
