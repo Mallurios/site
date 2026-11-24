@@ -187,6 +187,21 @@
   .pill img{width:25px;height:25px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.5)}
   .pill a.on{background:rgba(0,0,0,.55);color:#fff;font-weight:600}
 
+
+  /* ---------- celular: topo e menu mais compactos ---------- */
+  @media (max-width:759px){
+    .topbar{padding-top:calc(10px + env(safe-area-inset-top,0px));padding-bottom:10px}
+    .tb-in{gap:10px}
+    .logo{font-size:20px;white-space:nowrap}
+    .topbar .tb-cta{display:inline-block;padding:8px 13px;font-size:9.5px;letter-spacing:.1em;white-space:nowrap;margin-left:auto}
+    .tb-r{font-size:8px;letter-spacing:.16em;gap:5px;white-space:nowrap}
+    .pill{max-width:340px;padding:4px;bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+    .pill a{padding:5px 2px 4px;gap:2px;font-size:9.5px}
+    .pill svg{width:19px;height:19px}
+    .pill img{width:20px;height:20px}
+    .tb-cta .d{display:none}
+  }
+  @media (min-width:760px){.tb-cta .m{display:none}}
   /* ---------- computador ---------- */
   @media (min-width:760px){
     .pill{display:none}
@@ -222,7 +237,7 @@
       <a href="#sobre" data-r="sobre">Sobre</a>
       <a href="/">Site</a>
     </nav>
-    <a class="btn wa tb-cta" id="tbWa" target="_blank" rel="noopener" href="#">Agendar sessão</a>
+    <a class="btn wa tb-cta" id="tbWa" target="_blank" rel="noopener" href="#"><span class="d">Agendar sessão</span><span class="m">Agendar</span></a>
     <a class="tb-r" href="/" style="text-decoration:none" title="Ir para o site">Mallu Rios <i></i> Psicóloga</a>
   </div>
   <div class="progress" id="prog"></div>
