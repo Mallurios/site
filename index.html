@@ -174,6 +174,33 @@ nav.top a:hover{background:#F3ECDC}
 .tema.bg-janela h3,.tema.bg-janela p{color:#2A2622!important}
 .tema.bg-bule{background:linear-gradient(90deg,#FDE3AE 40%,rgba(253,227,174,0.75) 58%,rgba(253,227,174,0) 82%),url(/img/bule.jpg) right center/cover no-repeat,#FDE3AE!important}
 .tema.bg-bule h3,.tema.bg-bule p{color:#2A2622!important}
+
+/* demais seções em ticket */
+.qt-tk{margin-top:28px;max-width:420px;border-radius:20px;padding:22px 24px 0;--nt:calc(100% - 45px)}
+.qt-tk .lb{font:italic 500 13.5px 'Lora',serif;color:#FFE9A8}
+.qt-tk p{font:italic 500 22px/1.4 'Lora',serif;color:#fff!important;margin:8px 0 0}
+.qt-tk .stub{border-top:1.5px dashed rgba(255,255,255,.45);margin:18px -24px 0;padding:12px 24px 14px;font:italic 14px 'Lora',serif;color:#fff}
+.strip{background:transparent!important;padding:8px max(5vw,20px)!important}.strip .wrap{padding:0!important}
+.strip-tk{border-radius:20px;padding:26px 24px;text-align:center;--nt:50%}
+.strip-tk p{color:#FBF6EA!important;margin:0;font:italic 500 22px/1.4 'Lora',serif}
+.card.tk{min-height:230px;--nt:calc(100% - 52px)}
+.card.tk h3,.card.tk p,.card.tk .eyebrow{max-width:62%}
+.card.bg-bule h3,.card.bg-bule p,.card.bg-bule .go{color:#2A2622!important}.card.bg-bule .eyebrow{color:#8A6512!important}
+.card.bg-poltrona h3,.card.bg-poltrona p,.card.bg-poltrona .go{color:#fff!important}.card.bg-poltrona .eyebrow{color:#FFE9A8!important}
+.card.bg-bule{background:linear-gradient(90deg,#FDE3AE 40%,rgba(253,227,174,.75) 58%,rgba(253,227,174,0) 82%),url(/img/bule.jpg) right center/cover no-repeat,#FDE3AE!important}
+.card.bg-poltrona{background:linear-gradient(90deg,#154C93 40%,rgba(21,76,147,.75) 58%,rgba(21,76,147,0) 82%),url(/img/poltrona.jpg) right center/cover no-repeat,#154C93!important}
+.faq{border-top:none!important;display:grid;gap:12px}
+details.tk-f{background:#fff;border:none!important;border-radius:18px;padding:0 22px;--nt:50%}
+details.tk-f:nth-child(4n+1){background:#FFF4CC}details.tk-f:nth-child(4n+2){background:#E3ECFA}details.tk-f:nth-child(4n+3){background:#FDE1DA}details.tk-f:nth-child(4n){background:#fff}
+details.tk-f[open]{--nt:34px}
+summary{font-style:normal!important;font-size:18px!important}
+summary::after{color:#E0533B!important}
+.contact{background:var(--bg)!important}
+.contact-tk{border-radius:24px;padding:36px 24px 34px;--nt:calc(100% - 120px)}
+.contact-tk .eyebrow{color:#8A6512!important}
+.contact-tk .btn.wa{background:#2A2622!important;color:#F5C518!important}
+.contact-tk .btn.ghost{border-color:rgba(42,38,34,.4)!important}
+.contact-tk .ill-arch{border:4px solid #fff}
 </style>
 </head>
 <body>
@@ -209,14 +236,14 @@ nav.top a:hover{background:#F3ECDC}
     </div>
   </section>
 
-  <div class="strip"><p>Cuidar da mente é cuidar da vida real.</p></div>
+  <div class="strip"><div class="wrap"><div class="tk tk-d strip-tk"><p>Cuidar da mente é cuidar da vida real.</p></div></div></div>
 
   <section class="band" id="sobre">
     <div class="wrap two">
       <div>
         <div class="eyebrow">Sobre mim</div>
         <h2>Prazer, eu sou a Mallu</h2>
-        <p class="quote">Muitos padrões nasceram cedo. Entender de onde vêm ajuda a transformá-los.</p>
+        <div class="qt-tk tk tk-c"><div class="lb">Uma frase que guia meu trabalho</div><p>Muitos padrões nasceram cedo. Entender de onde vêm ajuda a transformá-los.</p><div class="stub">Mallu Rios · Psicóloga</div></div>
       </div>
       <div>
         <p>Sou psicóloga clínica e acredito que cuidar da mente é aprender, todos os dias, a construir uma relação mais saudável consigo mesma. Acompanho especialmente mulheres que vivem a sobrecarga do trabalho, da maternidade e das relações, e que quase sempre se colocam por último na própria lista.</p>
@@ -260,12 +287,12 @@ nav.top a:hover{background:#F3ECDC}
       <h2>Para começar a cuidar de você hoje</h2>
       <div class="ill"><img src="/img/girassol.jpg" alt=""></div>
       <div class="pausa">
-        <a class="card w" href="/pausa/">
+        <a class="card w tk bg-bule" href="/pausa/">
           <div class="eyebrow">App</div><h3>Pausa</h3>
           <p>Check-in emocional, respiração guiada, reflexão sobre autoestima, leituras curtas e exercícios de TCC.</p>
           <span class="go">Abrir o app →</span>
         </a>
-        <a class="card b" href="/blog/">
+        <a class="card b tk bg-poltrona" href="/blog/">
           <div class="eyebrow">Blog</div><h3>Textos sobre a vida real</h3>
           <p>Autoestima, autocuidado, emoções e relações, com estudos citados e exercícios para praticar.</p>
           <span class="go">Ler o blog →</span>
@@ -279,19 +306,19 @@ nav.top a:hover{background:#F3ECDC}
       <div class="eyebrow">Dúvidas frequentes</div>
       <h2>Antes de começar</h2>
       <div class="faq">
-        <details><summary>A terapia online funciona?</summary><p>Sim. O atendimento online é regulamentado pelo Conselho Federal de Psicologia e segue os mesmos cuidados éticos do presencial. Para muitas pessoas, ele facilita manter a constância, que é parte importante do processo.</p></details>
-        <details><summary>Quanto tempo dura cada sessão?</summary><p>As sessões têm 50 minutos e acontecem uma vez por semana, em um horário fixo combinado entre nós.</p></details>
-        <details><summary>Qual é o valor da sessão?</summary><p>Os valores e as formas de pagamento são informados pelo WhatsApp, junto com os horários disponíveis.</p></details>
-        <details><summary>E se eu precisar faltar?</summary><p>Basta avisar com pelo menos 24 horas de antecedência para remarcar. Faltas avisadas com menos de 24 horas são cobradas.</p></details>
-        <details><summary>Atende adolescentes?</summary><p>Sim, com autorização dos responsáveis. Antes de começar, conversamos também com eles sobre como o processo funciona.</p></details>
-        <details><summary>O que eu falar fica entre nós?</summary><p>Sim. Tudo o que é dito em sessão é protegido pelo sigilo profissional, previsto no Código de Ética Profissional do Psicólogo.</p></details>
-        <details><summary>E em uma situação de crise?</summary><p>A terapia não é um serviço de emergência. Em sofrimento intenso, ligue para o CVV no 188 (24 horas, gratuito) ou para o SAMU no 192.</p></details>
+        <details class="tk tk-f"><summary>A terapia online funciona?</summary><p>Sim. O atendimento online é regulamentado pelo Conselho Federal de Psicologia e segue os mesmos cuidados éticos do presencial. Para muitas pessoas, ele facilita manter a constância, que é parte importante do processo.</p></details>
+        <details class="tk tk-f"><summary>Quanto tempo dura cada sessão?</summary><p>As sessões têm 50 minutos e acontecem uma vez por semana, em um horário fixo combinado entre nós.</p></details>
+        <details class="tk tk-f"><summary>Qual é o valor da sessão?</summary><p>Os valores e as formas de pagamento são informados pelo WhatsApp, junto com os horários disponíveis.</p></details>
+        <details class="tk tk-f"><summary>E se eu precisar faltar?</summary><p>Basta avisar com pelo menos 24 horas de antecedência para remarcar. Faltas avisadas com menos de 24 horas são cobradas.</p></details>
+        <details class="tk tk-f"><summary>Atende adolescentes?</summary><p>Sim, com autorização dos responsáveis. Antes de começar, conversamos também com eles sobre como o processo funciona.</p></details>
+        <details class="tk tk-f"><summary>O que eu falar fica entre nós?</summary><p>Sim. Tudo o que é dito em sessão é protegido pelo sigilo profissional, previsto no Código de Ética Profissional do Psicólogo.</p></details>
+        <details class="tk tk-f"><summary>E em uma situação de crise?</summary><p>A terapia não é um serviço de emergência. Em sofrimento intenso, ligue para o CVV no 188 (24 horas, gratuito) ou para o SAMU no 192.</p></details>
       </div>
     </div>
   </section>
 
   <section class="band contact" id="contato">
-    <div class="wrap">
+    <div class="wrap"><div class="tk tk-y contact-tk">
       <div class="ill-arch"><img src="/img/janela.jpg" alt=""></div>
       <div class="eyebrow">Vamos conversar?</div>
       <h2>O primeiro passo pode ser uma mensagem</h2>
@@ -300,7 +327,7 @@ nav.top a:hover{background:#F3ECDC}
         <a class="btn wa" href="https://wa.me/5511958234734?text=Ol%C3%A1%20Mallu!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20sess%C3%A3o." target="_blank" rel="noopener"><svg><use href="#wa"/></svg>(11) 95823-4734</a>
         <a class="btn ghost" href="https://www.instagram.com/mallu_rios/" target="_blank" rel="noopener">@mallu_rios</a>
       </div>
-    </div>
+    </div></div>
   </section>
 </main>
 
