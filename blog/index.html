@@ -1,0 +1,604 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Blog da Mallu Rios</title>
+<meta name="description" content="Psicologia para mulheres cansadas de dar conta de tudo: textos sobre sobrecarga, burnout, relações e autoestima, por Mallu Rios, psicóloga CRP 06/234141.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Layout: mesmo sistema do app Pausa (bilhetes picotados, cores vinho e azul gelo sobre preto), em coluna única no celular e grade no computador */
+  :root{
+    --bg:#0D0B0C; --card:#171415; --ink:#F2EEE8; --soft:#A39C98; --paper:#F2EEE8; --paper-ink:#1D1A1B;
+    --wine:#7A1F30; --wine-d:#5E1624; --rose:#C2465C; --wine-l:#D7A3AD; --blue:#DCE8F2; --blue-ink:#22405A;
+    --sage:#BCD3E6; --line:#2C2627; --green:#25D366;
+    --serif:'Playfair Display',Georgia,serif; --sans:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:auto}
+  body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--sans);
+    padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+    padding-block:0;min-height:100vh;overflow-x:hidden}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible,textarea:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em;margin:0;text-wrap:balance}
+  p{margin:0;color:var(--soft);line-height:1.65}
+  .wrap{max-width:1080px;margin:0 auto}
+  .label{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--wine-l);font-weight:600}
+  .view{animation:fade .35s ease;padding-top:92px}
+  .view.home{padding-top:0}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.view{animation:none}.ticket{transition:none}}
+
+  /* ---------- topo ---------- */
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:20;
+    padding:calc(14px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px));
+    background:linear-gradient(180deg,rgba(13,11,12,.96),rgba(13,11,12,.84));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+  .tb-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .logo{font-family:var(--serif);font-style:italic;font-weight:600;font-size:25px;color:var(--paper);text-decoration:none;letter-spacing:-.01em}
+  .logo span{color:var(--rose)}
+  .tb-r{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:8px}
+  .tb-r i{width:4px;height:4px;border-radius:50%;background:var(--rose);display:block}
+  .tb-links{display:none;gap:26px;align-items:center}
+  .tb-links a{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#CFC8C3;text-decoration:none;font-weight:500;padding:6px 0;border-bottom:1px solid transparent;transition:color .2s}
+  .tb-links a:hover,.tb-links a.on{color:#fff;border-color:var(--rose)}
+  .tb-cta{display:none}
+  .progress{position:absolute;left:0;bottom:-1px;height:2px;background:var(--rose);width:0;transition:width .1s}
+
+  /* ---------- botões ---------- */
+  .btn{display:inline-block;border:none;cursor:pointer;font:500 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:15px 22px;border-radius:999px;background:var(--wine);color:#fff;text-decoration:none;text-align:center;transition:background .2s}
+  .btn:hover{background:var(--wine-d)}
+  .btn.ghost{background:transparent;color:var(--paper);border:1px solid #4A4244}
+  .btn.ghost:hover{border-color:var(--paper)}
+  .btn.wa{background:var(--green);color:#0B2A17;font-weight:600}
+  .btn.wa:hover{background:#1EBE5A}
+  .btn.full{display:block;width:100%;margin-top:14px}
+
+  /* ---------- hero ---------- */
+  .hero-in{display:grid;grid-template-columns:1fr;gap:0}
+  .hero-img{height:540px;background:url(hero.jpg) center 0/cover no-repeat,#0D0B0C;position:relative;
+    margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)))}
+  .hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0,var(--bg) 70px,rgba(13,11,12,0) 170px,rgba(13,11,12,0) 48%,rgba(13,11,12,.85) 82%,var(--bg) 100%)}
+  .hero-txt{position:relative;margin-top:-170px;text-align:center}
+  .hero-txt h1{font-size:42px;font-style:italic;color:var(--paper);margin-top:10px}
+  .hero-txt p{color:#C9C2BE;max-width:420px;margin:12px auto 0}
+  .meta{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+  .meta i{width:28px;height:1px;background:#3A3335}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+
+  /* ---------- seções ---------- */
+  .sec{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:44px 0 0}
+  .sec h3{font-size:25px;font-style:italic}
+  .sec a{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--wine-l);text-decoration:none;white-space:nowrap}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:16px;margin-top:18px}
+  .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px;margin-top:18px}
+
+  /* ---------- bilhete ---------- */
+  .ticket{--n:52px;position:relative;display:flex;flex-direction:column;background:var(--card);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ink);
+    box-shadow:inset 0 0 0 1px var(--line);transition:transform .2s;
+    -webkit-mask:radial-gradient(circle 11px at 0 calc(100% - var(--n)),#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 11px at 100% calc(100% - var(--n)),#0000 98%,#000) right/51% 100% no-repeat;
+            mask:radial-gradient(circle 11px at 0 calc(100% - var(--n)),#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 11px at 100% calc(100% - var(--n)),#0000 98%,#000) right/51% 100% no-repeat}
+  a.ticket:hover{transform:translateY(-3px)}
+  a.ticket:active{transform:scale(.985)}
+  .ticket .top{flex:1;padding:22px 22px 20px;position:relative}
+  .ticket h3{font-size:25px;font-style:italic;margin:10px 0 10px;max-width:88%;color:var(--ink)}
+  .ticket .top p{font-size:13.5px;border-left:2px solid var(--wine-l);padding-left:10px;max-width:90%}
+  .ticket .num{position:absolute;top:22px;right:22px;font-family:var(--serif);font-size:12px;color:var(--soft);display:flex;align-items:center;gap:8px}
+  .ticket .num i{display:block;width:30px;height:1px;background:currentColor;opacity:.6}
+  .ticket .orbit{position:absolute;right:-30px;bottom:-26px;width:170px;height:110px;opacity:.22;pointer-events:none}
+  .ticket .stub{height:var(--n);border-top:1.5px dashed var(--line);padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .ticket .stub span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);font-weight:500}
+  .barcode{height:24px;width:86px;flex-shrink:0;background:repeating-linear-gradient(90deg,currentColor 0 1px,transparent 1px 3px,currentColor 3px 5px,transparent 5px 6px,currentColor 6px 7px,transparent 7px 10px);color:var(--ink);opacity:.7}
+  .t-wine{background:var(--wine);box-shadow:none}
+  .t-wine h3,.t-wine .barcode{color:#FBF4F2}.t-wine p,.t-wine .num,.t-wine .stub span{color:#E5C9CE}.t-wine .top p{border-color:var(--sage)}.t-wine .stub{border-color:#94384A}.t-wine .label{color:#F0D5DA}
+  .t-paper{background:var(--paper);box-shadow:none}
+  .t-paper h3,.t-paper .barcode{color:var(--paper-ink)}.t-paper p,.t-paper .num,.t-paper .stub span{color:#5E5856}.t-paper .top p{border-color:var(--wine)}.t-paper .stub{border-color:#D6D0C6}.t-paper .label{color:var(--wine)}
+  .t-blue{background:var(--blue);box-shadow:none}
+  .t-blue h3,.t-blue .barcode{color:var(--paper-ink)}.t-blue p,.t-blue .num,.t-blue .stub span{color:var(--blue-ink)}.t-blue .top p{border-color:var(--blue-ink)}.t-blue .stub{border-color:#C2D4E4}.t-blue .label{color:var(--blue-ink)}
+  .t-dark .label{color:var(--sage)}.t-dark .top p{border-color:var(--sage)}
+  .t-wine .orbit{color:#FBF4F2}.t-paper .orbit{color:var(--wine)}.t-blue .orbit{color:var(--blue-ink)}.t-dark .orbit{color:#F4F2ED}
+  .quote .qt{font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.35;color:#FBF4F2;border:none;padding:0;margin-top:14px;max-width:100%}
+
+  /* ---------- filtros ---------- */
+  .chips{display:flex;gap:8px;overflow-x:auto;margin:20px 0 0;padding:0 0 6px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chips a{flex-shrink:0;border:1px solid var(--line);color:var(--ink);font:500 12.5px var(--sans);padding:9px 15px;border-radius:99px;text-decoration:none}
+  .chips a.on{background:var(--paper);color:var(--paper-ink);border-color:var(--paper)}
+  .page-head h2{font-size:34px;font-style:italic;margin-top:10px}
+  .page-head p{max-width:560px;margin-top:10px}
+
+  /* ---------- texto ---------- */
+  .art{max-width:680px;margin:0 auto}
+  .back{display:inline-block;color:var(--wine-l);font:500 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;margin-bottom:22px}
+  .r-head h1{font-size:36px;font-style:italic;color:var(--paper);margin:12px 0 12px}
+  .r-head .sub{font-size:16px;color:#C9C2BE;line-height:1.55}
+  .r-meta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:18px;padding-bottom:22px;border-bottom:1px dashed var(--line);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+  .r-meta img{width:32px;height:32px;border-radius:50%;object-fit:cover}
+  .r-body{margin-top:26px}
+  .r-body p{font-size:17px;line-height:1.85;color:#DAD4CF;margin-bottom:20px}
+  .r-body p:first-of-type::first-letter{font-family:var(--serif);font-size:60px;float:left;line-height:.9;padding:6px 10px 0 0;color:var(--rose);font-style:italic}
+  .r-body blockquote{margin:30px 0;padding:4px 0 4px 20px;border-left:2px solid var(--rose);font-family:var(--serif);font-style:italic;font-size:24px;line-height:1.4;color:var(--paper)}
+  .box{border-radius:18px;padding:24px;margin-top:24px}
+  .box h3{font-size:22px;font-style:italic;margin:10px 0 10px}
+  .box p{font-size:15px}
+  .box.estudo{background:var(--paper);color:var(--paper-ink)}
+  .box.estudo .label{color:var(--wine)}
+  .box.estudo h3{color:var(--paper-ink)}
+  .box.estudo p{color:#4A4442}
+  .box.estudo .ref{display:block;margin-top:14px;font-size:12.5px;color:var(--wine);font-weight:500;line-height:1.5}
+  .box.estudo .nota{font-size:12px;color:#7E7774;margin-top:10px}
+  .box.vida{background:var(--blue);color:var(--paper-ink)}
+  .box.vida .label,.box.vida p{color:var(--blue-ink)}
+  .box.vida h3{color:var(--paper-ink)}
+  .box.card{background:var(--card);border:1px solid var(--line)}
+  .box .ask{font-family:var(--serif);font-style:italic;color:var(--paper);font-size:18px;line-height:1.45;border-left:2px solid var(--rose);padding-left:14px;margin-top:16px}
+  .ex{font-size:13.5px;color:#C9C2BE;background:#201B1C;border-radius:12px;padding:12px 14px;margin-top:14px;line-height:1.6}
+  .ex b{display:block;color:var(--wine-l);font-weight:500;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:4px}
+  .step{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px dashed var(--line);cursor:pointer}
+  .step:last-child{border:none}
+  .step .ck{width:22px;height:22px;border-radius:50%;border:1.5px solid #5A5153;flex-shrink:0;margin-top:2px;display:grid;place-items:center;font-size:12px;color:transparent;transition:.2s}
+  .step.on .ck{background:var(--rose);border-color:var(--rose);color:#fff}
+  .step p{font-size:14.5px;color:#DAD4CF}
+  .step.on p{color:var(--soft);text-decoration:line-through}
+  .box.diario{background:var(--paper)}
+  .box.diario .label{color:var(--wine)}
+  .box.diario h3{color:var(--paper-ink)}
+  textarea{display:block;width:100%;min-height:120px;border:1px solid #D6D0C6;border-radius:12px;background:#FBF9F5;padding:14px;font:400 15px/1.6 var(--sans);color:var(--paper-ink);resize:vertical;margin-top:10px}
+  textarea:focus{outline:none;border-color:var(--wine)}
+  .saved-note{font-size:11.5px;color:#7E7774;margin-top:6px;min-height:16px}
+  .share{display:flex;gap:10px;margin-top:16px}
+  .share input{flex:1;min-width:0;background:#201B1C;border:1px solid var(--line);border-radius:999px;color:var(--soft);font:400 12.5px var(--sans);padding:0 16px;height:46px}
+  .share .btn{padding:0 20px;height:46px}
+  .cta{background:var(--wine);border-radius:18px;padding:26px 24px;margin-top:28px}
+  .cta h3{font-size:24px;font-style:italic;color:#FBF4F2;margin:10px 0}
+  .cta p,.cta .label{color:#E5C9CE}
+
+  /* ---------- sobre ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
+  .about-hero{background:var(--card);border:1px solid var(--line);border-radius:18px;text-align:center;padding:32px 22px}
+  .about-hero img{width:132px;height:132px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 16px;border:4px solid var(--card);outline:2px solid var(--sage)}
+  .about-hero h2{font-size:34px;font-style:italic;color:var(--paper)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+  .card h3{font-size:22px;font-style:italic;margin-bottom:10px}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .pills span{background:var(--blue);color:var(--blue-ink);font-size:12.5px;padding:7px 13px;border-radius:99px}
+  .info{list-style:none;margin:0;padding:0}
+  .info li{padding:12px 0;border-bottom:1px dashed var(--line);color:var(--soft);line-height:1.55;font-size:14px}
+  .info li:last-child{border:none}
+  .info b{color:var(--ink);font-weight:600}
+  .teaser{display:flex;gap:18px;align-items:center;flex-wrap:wrap;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;margin-top:18px}
+  .teaser img{width:84px;height:84px;border-radius:50%;object-fit:cover;outline:2px solid var(--sage);outline-offset:2px}
+  .teaser .tx{flex:1;min-width:220px}
+  .teaser h3{font-size:22px;font-style:italic;margin-bottom:6px}
+  .teaser .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+
+  /* ---------- rodapé ---------- */
+  .foot{max-width:1080px;margin:56px auto 0;padding:26px 0 150px;border-top:1px solid var(--line);text-align:center}
+  .foot p{font-size:12px;line-height:1.7;color:var(--soft)}
+  .foot p+p{margin-top:8px}
+  .foot b,.foot .crp{color:#fff;font-weight:600}
+  .foot a{color:var(--wine-l);text-decoration:none;font-weight:600}
+
+  /* ---------- menu flutuante (celular) ---------- */
+  .pill{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));width:calc(100% - 24px);max-width:416px;display:flex;z-index:30;
+    border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(40,36,38,.72);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);padding:6px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+  .pill a{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;border-radius:999px;padding:8px 2px 7px;font:500 10.5px var(--sans);color:#E9E4DF;text-decoration:none;transition:background .2s}
+  .pill svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .pill img{width:25px;height:25px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.5)}
+  .pill a.on{background:rgba(0,0,0,.55);color:#fff;font-weight:600}
+
+  /* ---------- computador ---------- */
+  @media (min-width:760px){
+    .pill{display:none}
+    .tb-r{display:none}
+    .tb-links{display:flex}
+    .tb-cta{display:inline-block;padding:11px 18px;font-size:11px}
+    .view{padding-top:112px}
+    .view.home{padding-top:0}
+    .hero-in{grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:120px}
+    .hero-img{order:2;height:600px;margin:0;border-radius:20px;background-position:center top}
+    .hero-img::after{border-radius:20px;background:linear-gradient(180deg,rgba(13,11,12,0) 60%,rgba(13,11,12,.9) 100%)}
+    .hero-txt{margin-top:0;text-align:left}
+    .hero-txt h1{font-size:58px}
+    .hero-txt p{margin-left:0;font-size:16px;max-width:460px}
+    .meta{justify-content:flex-start}
+    .hero-btns{justify-content:flex-start}
+    .foot{padding-bottom:50px}
+    .r-head h1{font-size:46px}
+    .page-head h2{font-size:42px}
+    .about-grid{grid-template-columns:340px 1fr;align-items:start}
+  }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="orb" viewBox="0 0 170 110"><ellipse cx="85" cy="55" rx="80" ry="40" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(-14 85 55)"/><circle cx="125" cy="38" r="5" fill="currentColor"/></symbol></defs></svg>
+
+<header class="topbar">
+  <div class="tb-in">
+    <a class="logo" href="#inicio">Vida Real<span>.</span></a>
+    <nav class="tb-links" aria-label="Principal">
+      <a href="#inicio" data-r="inicio">Início</a>
+      <a href="#textos" data-r="textos">Textos</a>
+      <a href="/pausa/#teste">Reflexão de autoestima</a>
+      <a href="#sobre" data-r="sobre">Sobre</a>
+    </nav>
+    <a class="btn wa tb-cta" id="tbWa" target="_blank" rel="noopener" href="#">Agendar sessão</a>
+    <div class="tb-r">Mallu Rios <i></i> Psicóloga</div>
+  </div>
+  <div class="progress" id="prog"></div>
+</header>
+
+<main id="app"></main>
+<footer class="foot">
+  <p>Os textos deste blog são educativos e não substituem a psicoterapia. Em sofrimento intenso, ligue para o <b>CVV 188</b> (24h, gratuito) ou procure ajuda profissional.</p>
+  <p><span class="crp">Mallu Rios · Psicóloga · CRP 06/234141</span> · <a href="https://instagram.com/mallu_rios" target="_blank" rel="noopener">@mallu_rios</a></p>
+</footer>
+
+<nav class="pill" aria-label="Menu">
+  <a href="#inicio" data-r="inicio"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Início</a>
+  <a href="#textos" data-r="textos"><svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5zM13 4h5.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H13z"/></svg>Textos</a>
+  <a href="/pausa/#teste"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="10" rx="6" ry="7.5"/><path d="M12 17.5V21M8.5 21h7"/></svg>Reflexão</a>
+  <a href="#sobre" data-r="sobre"><img src="mallu.jpg" alt="">Sobre</a>
+</nav>
+
+<script>
+const IG='https://instagram.com/mallu_rios';
+const TESTE='/pausa/';
+const wa=t=>'https://wa.me/5511958234734?text='+encodeURIComponent(t);
+document.getElementById('tbWa').href=wa('Olá Mallu! Vim pelo blog e gostaria de agendar uma sessão.');
+
+const CATS={
+  inicio:{n:'Comece aqui',c:'t-wine',x:''},
+  autoestima:{n:'Autoestima',c:'t-paper',x:'A forma como você se trata nos dias comuns e o que você aceita dos outros.'},
+  autocuidado:{n:'Autocuidado',c:'t-blue',x:'Cuidar de você como base, e não como prêmio depois que tudo estiver pronto.'},
+  emocoes:{n:'Emoções',c:'t-dark',x:'Aprender a nomear o que você sente, em vez de brigar com isso.'},
+  dependencia:{n:'Dependência emocional',c:'t-wine',x:'Quando o amor do outro vira a única prova do seu valor.'},
+  trabalho:{n:'Ansiedade no trabalho',c:'t-blue',x:'Quando o valor fica preso ao desempenho e o domingo já pesa.'},
+  terapia:{n:'Terapia',c:'t-paper',x:'Como funciona, o que esperar e por onde começar.'}
+};
+
+const DIST={
+ catastrofe:{n:'Catastrofização',o:'Imaginar o pior cenário possível e reagir como se ele já fosse certo.',e:`"Se ele terminar comigo, eu nunca mais vou ser feliz." "Se eu errar nessa reunião, vou ser demitida."`,q:'Qual é o cenário mais provável, e não o pior? Se o pior acontecer, como eu lidaria?'},
+ mental:{n:'Leitura mental',o:'Ter certeza do que o outro está pensando sem ele ter dito.',e:`"Ele visualizou e não respondeu, está perdendo o interesse." "Minha chefe me achou incompetente."`,q:'Que provas eu tenho do que ele pensa? Que outras explicações seriam possíveis?'},
+ tudo:{n:'Tudo ou nada',o:'Ver as coisas só em extremos: perfeito ou fracasso, sem meio termo.',e:`"Se não ficou perfeito, não serviu." "Ou eu dou conta de tudo, ou sou incapaz."`,q:'Onde essa situação estaria numa escala de 0 a 100, e não só em 0 ou 100?'},
+ deveria:{n:'Os "deveria"',o:'Regras rígidas sobre como você ou os outros têm que ser, que geram culpa e cobrança.',e:`"Eu deveria dar conta de tudo sozinha." "Eu não deveria me sentir assim."`,q:'De onde veio essa regra? Ela me ajuda ou só me pune? Como eu diria isso de um jeito mais flexível?'},
+ rotulo:{n:'Rotulação',o:'Transformar um comportamento ou erro em um rótulo sobre quem você é.',e:`"Eu sou burra." "Eu sou fraca por ainda sentir falta dele."`,q:'Eu errei em uma coisa, ou eu sou isso por inteiro? O que eu diria de uma amiga na mesma situação?'},
+ emocional:{n:'Raciocínio emocional',o:'Tomar o que você sente como prova de que algo é verdade.',e:`"Eu me sinto culpada por descansar, então devo estar fazendo algo errado." "Me sinto insuficiente, então sou."`,q:'Sentir isso é o mesmo que isso ser verdade? Que fatos eu tenho além da emoção?'}
+};
+
+const PHRASES=[
+  'Você não precisa merecer o próprio cuidado. Ele é seu por direito.',
+  'Dizer não para o outro, às vezes, é dizer sim para você.',
+  'A voz que te critica não é a voz da verdade. É só a mais alta.',
+  'Descansar também é produtivo quando o que se produz é saúde.',
+  'Você não é o que você entrega. Você é quem você é.',
+  'Autoestima não nasce no espelho. Nasce na forma como você se trata.',
+  'Sentir não é exagero. É informação sobre o que importa para você.',
+  'Você pode ir devagar e ainda assim estar indo.',
+  'Quem se abandona para ser amada acaba sozinha dentro de si.',
+  'Limite não afasta quem te ama de verdade. Afasta quem se beneficiava da sua falta dele.'
+];
+
+const P=[
+{id:'base',cat:'inicio',min:4,d:'deveria',t:`Tudo começa na forma como você se trata`,s:`Por que autoestima não é um tema isolado, e sim a base da sua vida inteira.`,
+body:[
+`Quando uma mulher fala sobre o que a incomoda, ela raramente diz que quer trabalhar a autoestima. Ela fala do namoro que machuca, do chefe que ela não consegue enfrentar, da ansiedade que não deixa dormir, do cansaço que não passa. E quando a gente olha com calma, quase sempre aparece a mesma raiz: a forma como ela se trata.`,
+`Autoestima não é se achar bonita no espelho. É a relação que você tem com você mesma nos dias comuns. É o tom da sua voz interna quando você erra, o quanto você se permite descansar, o que você aceita das pessoas e o quanto você acredita que merece cuidado.`,
+`>Você não aceita do outro aquilo que você não aceitaria de si mesma.`,
+`Por isso este blog tem quatro caminhos que parecem diferentes, mas conversam o tempo todo. A autoestima define o que você tolera. O autocuidado mostra se você se coloca na própria lista. A dependência emocional aparece quando o amor do outro vira a única prova do seu valor. E a ansiedade no trabalho cresce quando o seu valor fica preso ao quanto você produz.`,
+`Mexer em um deles costuma mexer em todos. E isso é uma ótima notícia, porque significa que pequenos passos na forma como você se trata têm efeito na sua vida inteira.`],
+vida:`Repare nesta semana em uma situação em que você se cobrou, se calou ou se deixou por último. Ela provavelmente aconteceu em mais de uma área da sua vida. Esse padrão é o que vamos cuidar juntas, texto por texto.`,
+pr:[`Escolha qual dos quatro temas mais pesa para você hoje.`,`Leia o primeiro texto desse tema ainda esta semana.`,`Anote uma frase que você costuma dizer para si mesma quando erra.`],
+q:`Em qual área da sua vida você mais se deixa por último hoje?`},
+
+{id:'espelho',cat:'autoestima',min:5,d:'rotulo',t:`Autoestima não nasce no espelho`,s:`Ela nasce na forma como você fala com você quando ninguém está olhando.`,
+body:[
+`A gente aprendeu que autoestima é gostar da própria imagem. Então muitas mulheres investem em mudar o corpo, o cabelo, o estilo, e mesmo assim continuam se sentindo insuficientes. Porque o problema nunca esteve só no reflexo.`,
+`Autoestima é construída nas pequenas escolhas do dia. Quando você cumpre algo que prometeu a si mesma, quando respeita o seu cansaço, quando se defende numa conversa difícil. Cada vez que você se escolhe, você manda uma mensagem para dentro: eu importo.`,
+`>Autoestima é a soma das vezes em que você não se abandonou.`,
+`O contrário também é verdade. Cada vez que você engole o que sente para não incomodar, ou se compara até se diminuir, a mensagem que fica é a de que você vem depois. E ninguém se sente valiosa vindo sempre depois.`,
+`A boa notícia é que isso se treina. Não com frases de efeito, mas com atitudes pequenas e repetidas que mostram para você mesma que dá para confiar em você.`],
+est:{x:`Em 2009, uma pesquisa pediu que pessoas repetissem a frase "eu sou uma pessoa amável". Quem já tinha a autoestima baixa terminou se sentindo pior do que quem não repetiu nada. A explicação provável é que a frase briga com aquilo em que a pessoa acredita lá dentro, e a voz que responde "mentira" fica ainda mais alta. No mesmo estudo, quem pensou nas vezes em que a frase era verdade e também nas vezes em que não era se saiu melhor.`,ref:`Wood, Perunovic & Lee (2009), Psychological Science`,url:`https://contextualscience.org/publications/wood_perunovic_lee_2009`},
+vida:`Mulheres com uma autoestima mais firme não deixam de sentir insegurança. Elas só deixam de tomar decisões a partir dela. Isso aparece na escolha do parceiro, no valor que cobram pelo próprio trabalho e no quanto conseguem descansar sem culpa.`,
+pr:[`Faça hoje uma promessa pequena para você e cumpra. Pode ser beber água, dormir mais cedo ou sair dez minutos.`,`Quando se pegar se comparando, troque por: o que eu admiro nela que eu posso cultivar em mim?`,`À noite, anote uma situação em que você se escolheu.`],
+q:`Qual foi a última vez que você se escolheu, mesmo com medo?`},
+
+{id:'voz',cat:'autoestima',min:5,d:'rotulo',t:`A voz que te critica não é a sua`,s:`Entenda de onde vem a cobrança interna e como diminuir o volume dela.`,
+body:[
+`Muitas mulheres carregam uma voz interna muito dura. Ela diz que você poderia ter feito melhor, que está exagerando, que não é para tanto. Ela fala com uma certeza tão grande que parece a verdade.`,
+`Mas essa voz tem história. Muitas vezes ela é a reunião de frases que você ouviu na infância, de exigências da escola, de comparações em casa. Em algum momento ela foi útil: se você se cobrasse antes, talvez ninguém mais precisasse cobrar. Ela nasceu para te proteger da rejeição.`,
+`>A voz que te critica é a mais alta, não a mais verdadeira.`,
+`O problema é que hoje ela fere mais do que protege. E a gente não consegue silenciá-la de uma vez, mas consegue parar de obedecer a ela. Isso começa quando você percebe que ela está falando e se pergunta se aquilo é um fato ou um medo.`,
+`Com o tempo, você aprende a criar outra voz. Uma que reconhece o erro sem te humilhar, que cobra com respeito, que fala com você como você falaria com alguém que ama.`],
+est:{x:`Num estudo da Universidade da Califórnia em Berkeley, quem foi gentil consigo depois de ir mal numa prova estudou mais tempo para a seguinte do que quem só tentou levantar a autoestima. Ou seja, a gentileza não acomodou. Ela deu segurança para tentar de novo.`,ref:`Breines & Chen (2012), Personality and Social Psychology Bulletin`,url:`https://pubmed.ncbi.nlm.nih.gov/22645164/`},
+vida:`Essa voz decide muita coisa sem você perceber. Ela te impede de se candidatar à vaga, de postar o seu trabalho, de pedir um aumento ou de sair de uma relação, porque sempre encontra um motivo para você não ser suficiente.`,
+pr:[`Escreva a frase exata que você se disse da última vez que errou, com as mesmas palavras.`,`Pergunte: que provas eu tenho de que essa frase é verdade? E que provas eu tenho do contrário?`,`Reescreva a frase como você diria para a sua melhor amiga na mesma situação e leia em voz alta. Estranhar é normal: é uma língua que você ainda está aprendendo.`],
+q:`Qual é a frase que essa voz mais repete para você? De quem ela lembra?`},
+
+{id:'sim',cat:'autoestima',min:5,d:'mental',t:`Você diz sim para todo mundo. E para você?`,s:`Por que dizer não dá tanto medo, e o que cada sim engolido custa.`,
+body:[
+`Você diz sim para a reunião que não cabia na agenda, para o favor que ninguém agradeceu, para o convite que você queria recusar. E depois, no carro, no banho ou na fila do mercado, vem o cansaço e uma vontade de chorar sem saber direito por quê.`,
+`Tem uma explicação para isso. Ser deixada de lado dói de verdade, e o cérebro aprendeu a evitar essa dor a qualquer custo. Por isso dizer não dá tanto medo: ele soa como o primeiro passo para ficar de fora.`,
+`>Cada sim que você engole para fugir dessa dor vira um não para você mesma.`,
+`Quando você aprende a pausar antes de responder, a história muda. Dizer não não precisa ser um corte. Pode ser "agora não consigo", "deixa eu ver e te respondo amanhã", ou só um não curto, sem justificativa longa.`,
+`Isso não te torna fria. Te torna alguém em quem você mesma pode confiar, porque os seus sins passam a significar alguma coisa.`],
+est:{x:`Em 2003, pesquisadores da UCLA colocaram pessoas num jogo de computador em que, de repente, elas eram excluídas pelos outros jogadores. No exame de imagem, acendeu uma região do cérebro que também participa da dor física. Foi um estudo feito com 13 pessoas, então vale como uma pista de como a rejeição é sentida, e não como uma regra para todo mundo.`,ref:`Eisenberger, Lieberman & Williams (2003), Science`,url:`https://pubmed.ncbi.nlm.nih.gov/14551436/`},
+vida:`Quem diz sim por medo costuma acumular tarefas que não são suas, aceitar horários impossíveis e guardar ressentimento em silêncio de quem ama. O ressentimento é um aviso de que algum limite foi cruzado, e quase sempre foi o seu.`,
+pr:[`Antes de responder a um pedido esta semana, respire e diga: deixa eu ver e já te respondo.`,`Anote quantos sins você deu por medo e quantos deu por vontade.`,`Treine um não curto em voz alta, sem pedir desculpa e sem explicar demais.`],
+q:`O que você teme que aconteça se disser não?`},
+
+{id:'recompensa',cat:'autocuidado',min:4,d:'deveria',t:`Autocuidado não é recompensa`,s:`Cuidar de você não é um prêmio para depois que tudo estiver pronto.`,
+body:[
+`Muitas mulheres só se permitem cuidar de si quando terminam tudo. Quando a casa está arrumada, o trabalho entregue, os filhos dormindo, o companheiro atendido. Só que tudo nunca termina. E o cuidado vai ficando para um depois que não chega.`,
+`Quando o autocuidado vira recompensa, ele precisa ser merecido. E aí entra a lógica do esgotamento: você só se cuida quando já está no limite, como se o cansaço extremo fosse a única justificativa aceitável.`,
+`>Você não precisa estar exausta para merecer descanso.`,
+`Autocuidado de verdade é base, não prêmio. É o que te sustenta para dar conta da vida, e não o que você ganha por ter dado conta dela. Ele também não precisa ser caro ou bonito. Às vezes é dizer não, almoçar sentada, ir ao médico que você adia há meses.`,
+`Quando você muda essa lógica, o cuidado deixa de ser um evento raro e passa a ser um jeito de viver.`],
+vida:`Quem só se cuida no limite costuma adoecer mais, ficar mais irritada e se sentir mais sozinha. O cuidado constante, mesmo em doses pequenas, ajuda o sono, a paciência e a capacidade de lidar com o trabalho e com as relações.`,
+pr:[`Escolha um cuidado de 10 minutos e coloque na agenda como compromisso.`,`Liste três cuidados básicos que você vem adiando, como consultas e exames.`,`Observe a culpa quando ela aparecer e não deixe que ela decida por você.`],
+q:`O que você acha que precisa fazer antes de merecer cuidado?`},
+
+{id:'descanso',cat:'autocuidado',min:4,d:'emocional',t:`O descanso que a culpa não deixa`,s:`Por que é tão difícil parar, e como começar a descansar de verdade.`,
+body:[
+`Você deita no sofá e, em poucos minutos, a cabeça começa a listar o que falta fazer. O corpo está parado, mas a mente continua trabalhando. E no fim do dia vem aquela sensação de que nem descansou, nem produziu.`,
+`A culpa ao descansar costuma ter uma raiz: em algum momento você aprendeu que o seu valor está no que você faz pelos outros. Então parar parece perigoso, como se você estivesse deixando de ser útil e, por isso, deixando de ser importante.`,
+`>Descanso não é o intervalo da vida. Também é vida.`,
+`Descansar é uma habilidade, e como toda habilidade, se aprende. No começo vai ser desconfortável. A culpa vai aparecer, e tudo bem. O objetivo não é não sentir culpa, é não deixar que ela comande.`,
+`Comece com pausas curtas e intencionais. Avise a si mesma: agora eu estou descansando. Isso ajuda o cérebro a entender que parar também é uma escolha válida.`],
+vida:`O descanso de qualidade ajuda a concentração, a regulação emocional e a criatividade. Quem consegue descansar sem culpa tende a ter menos explosões em casa e a render melhor no trabalho.`,
+pr:[`Escolha um momento do dia para uma pausa de 15 minutos sem celular.`,`Quando a culpa vier, diga em voz baixa: eu também sou responsável por mim.`,`Perceba como você se sente depois e anote.`],
+q:`O que você sente que vai acontecer se você parar?`},
+
+{id:'naodeveria',cat:'emocoes',min:5,d:'deveria',t:`"Eu não deveria me sentir assim"`,s:`Por que brigar com o que você sente cansa mais do que sentir.`,
+body:[
+`Tem uma frase que muita mulher repete: eu sei que eu não deveria me sentir assim. E aí, além de sentir, ela ainda briga com o que sente. É como levar duas pancadas pelo mesmo motivo.`,
+`A gente aprendeu cedo que algumas emoções são aceitáveis e outras não. Raiva de mulher é exagero, tristeza é fraqueza, ciúme é feio, cansaço é frescura. Então a emoção aparece e vem junto o julgamento sobre ela.`,
+`>Brigar com o que você sente cansa muito mais do que sentir.`,
+`O caminho não é calar o sentimento nem fingir que ele não está ali. É dar nome. Dizer para si mesma: isso é raiva. Isso é medo. Isso é vergonha. Parece pouco, mas muda a relação com a emoção, porque ela deixa de ser uma nuvem que te engole e passa a ser uma informação que você consegue olhar.`,
+`Sentir não é o problema, e sentir não significa agir. Você pode estar com raiva e escolher não gritar, pode estar com medo e escolher tentar. Mas para escolher, primeiro precisa deixar a emoção existir.`],
+est:{x:`Em 2007, pesquisadores da UCLA mostraram, com ressonância magnética, que dar nome à emoção diminuía a resposta da amígdala, uma região ligada ao alarme do cérebro. Isso é uma pista de como a regulação emocional funciona. Não é uma cura, e nomear não faz a emoção sumir.`,ref:`Lieberman et al. (2007), Psychological Science`,url:`https://pubmed.ncbi.nlm.nih.gov/17576282/`},
+vida:`Quando você para de se julgar por sentir, sobra energia para lidar com o que causou a emoção. Nas relações, isso significa conseguir dizer "isso me magoou" em vez de explodir ou engolir. No trabalho, significa reconhecer a ansiedade antes de ela virar sobrecarga.`,
+pr:[`Três vezes ao dia, pare e complete: agora eu estou sentindo ___.`,`Use palavras mais específicas do que "mal" ou "estressada". Tente cansada, frustrada, envergonhada, sobrecarregada.`,`Quando vier o "eu não deveria", troque por: faz sentido eu me sentir assim, e agora o que eu preciso?`],
+q:`Qual emoção você aprendeu que não podia sentir?`},
+
+{id:'medo',cat:'dependencia',min:6,d:'catastrofe',t:`Quando o amor vira lugar de medo`,s:`Sinais de dependência emocional que a gente costuma confundir com amor.`,
+body:[
+`Na dependência emocional, o outro passa a ser o centro da sua estabilidade. O seu humor depende da mensagem que ele mandou ou não mandou. O seu dia muda se ele está distante. E você começa a fazer de tudo para não perder aquela pessoa, até deixar de fazer coisas por você.`,
+`Muitas vezes isso é confundido com amor intenso. Mas amor não costuma vir acompanhado de tanta ansiedade, de medo constante de abandono, de pedir desculpas por tudo, de se diminuir para caber.`,
+`>Amor não deveria custar a sua paz.`,
+`A dependência emocional quase sempre tem raízes antigas. Ela aparece em quem aprendeu cedo que o afeto era incerto, que precisava se esforçar para ser vista, que ficar sozinha era perigoso. Então o adulto repete o que a criança aprendeu para sobreviver.`,
+`Reconhecer isso não é motivo de vergonha. É o primeiro passo para construir relações em que você não precisa se abandonar para ser amada.`],
+est:{x:`Num estudo sobre as bases em que as pessoas apoiam o próprio valor, quem apoiava esse valor na aprovação dos outros teve uma queda maior de autoestima e de humor depois de uma crítica. Quanto mais o seu valor depende do olhar de alguém, mais cada olhar pesa.`,ref:`Park & Crocker (2008), Self and Identity`,url:`https://ubwp.buffalo.edu/selfandmotivationlab/wp-content/uploads/sites/91/2018/05/Park-Crocker-2008-SAI.pdf`},
+vida:`A dependência emocional afeta muito além do relacionamento. Ela consome a energia que iria para o trabalho, afasta amizades, diminui a autoestima e pode fazer você permanecer em situações que te fazem mal por medo de ficar só.`,
+pr:[`Observe quantas decisões da sua semana foram tomadas pensando em não desagradar alguém.`,`Retome uma atividade que era sua antes da relação, mesmo que pequena.`,`Converse com uma amiga de confiança sobre o que você está percebendo.`],
+q:`O que você tem medo que aconteça se parar de se esforçar tanto para ser amada?`},
+
+{id:'sozinha',cat:'dependencia',min:5,d:'catastrofe',t:`Sozinha não é abandonada`,s:`Aprender a ficar consigo é o antídoto mais forte contra a dependência.`,
+body:[
+`Para muitas mulheres, ficar sozinha dói como abandono. O silêncio da casa, o fim de semana sem planos, a ausência de mensagens. Tudo isso desperta uma angústia antiga, como se estar só significasse não ter valor.`,
+`Mas existe uma diferença importante entre estar sozinha e estar abandonada. Abandono é quando ninguém cuida de você. Estar sozinha pode ser o momento em que você finalmente cuida.`,
+`>Quem aprende a ficar consigo não aceita qualquer companhia.`,
+`Quando você constrói uma boa relação com a sua própria presença, as relações deixam de ser uma necessidade desesperada e passam a ser uma escolha. Você escolhe ficar porque quer, e não porque tem medo de ficar sem.`,
+`Isso não acontece de um dia para o outro. Começa com pequenas experiências de estar com você e perceber que você sobrevive, e que às vezes até gosta.`],
+vida:`Quem consegue ficar bem sozinha costuma colocar limites com mais facilidade, escolher melhor e sair mais cedo de relações que machucam, porque a solidão deixa de ser uma ameaça.`,
+pr:[`Marque um encontro com você esta semana: um café, um filme, uma caminhada.`,`Durante esse tempo, observe o que sente sem pegar o celular.`,`Escreva uma coisa que você descobriu sobre você nesse momento.`],
+q:`Como era estar sozinha quando você era criança?`},
+
+{id:'produtividade',cat:'trabalho',min:5,d:'tudo',t:`Você não é a sua produtividade`,s:`Quando o seu valor fica preso ao desempenho, a ansiedade vira rotina.`,
+body:[
+`Você entrega, entrega, entrega, e mesmo assim sente que não está fazendo o suficiente. Um elogio dura pouco, uma crítica dura dias. E qualquer erro parece uma ameaça ao seu lugar.`,
+`Isso costuma acontecer quando o seu valor pessoal se mistura com o seu desempenho. Aí o trabalho deixa de ser o que você faz e passa a ser quem você é. E toda tarefa vira uma prova de que você merece estar ali.`,
+`>O seu valor não sobe e desce junto com as suas entregas.`,
+`Esse é um terreno fértil para a ansiedade e para o burnout. Porque se o valor depende de produzir, parar vira perigo, errar vira tragédia e dizer não vira impossível.`,
+`Separar quem você é do que você entrega não significa trabalhar menos ou se importar menos. Significa trabalhar a partir de um lugar mais seguro, e não do medo de não ser suficiente.`],
+vida:`Quando o trabalho define todo o seu valor, ele invade o fim de semana, o sono e as relações. Separar essas coisas devolve espaço para a vida pessoal e, muitas vezes, até melhora o próprio desempenho.`,
+pr:[`Liste três qualidades suas que não têm nada a ver com trabalho.`,`Defina um horário para encerrar o dia e respeite por uma semana.`,`Quando errar, descreva o erro como um fato, sem adjetivos sobre você.`],
+q:`Quem você seria se não tivesse que provar nada a ninguém?`},
+
+{id:'domingo',cat:'trabalho',min:4,d:'catastrofe',t:`Quando o domingo à noite pesa`,s:`A ansiedade antecipatória e como impedir que ela roube o seu descanso.`,
+body:[
+`Chega domingo à tarde e o corpo já sente a segunda-feira. O peito aperta, a cabeça revisa reuniões, o sono demora. Você ainda não está no trabalho, mas já está sofrendo por ele.`,
+`Isso se chama ansiedade antecipatória. A mente tenta se preparar para o perigo antes dele chegar, e acaba fazendo você viver o problema duas vezes: antes, na imaginação, e depois, na realidade.`,
+`>A segunda-feira só começa na segunda.`,
+`Esse sinal não deve ser ignorado. Às vezes ele aponta para uma sobrecarga real, para um ambiente que desrespeita os seus limites ou para uma cobrança interna que transformou o trabalho em ameaça. Vale entender o que exatamente pesa.`,
+`Enquanto isso, dá para criar rituais que devolvam o domingo para você e ajudem o corpo a entender que ainda é tempo de descanso.`],
+est:{x:`Tarefa não terminada fica ecoando na mente. Mas um estudo de 2011 mostrou que as pessoas não precisavam terminar a tarefa para parar de pensar nela. Bastava fazer um plano específico, com o que, quando e onde. Com o plano no papel, os pensamentos invasivos diminuíam.`,ref:`Masicampo & Baumeister (2011), Journal of Personality and Social Psychology`,url:`https://pubmed.ncbi.nlm.nih.gov/21688924/`},
+vida:`Quando a ansiedade com o trabalho toma o fim de semana, ninguém descansa de verdade. E sem descanso, a semana começa mais pesada, num ciclo que alimenta o esgotamento.`,
+pr:[`Antes de dormir, escreva as três coisas que mais te preocupam, cada uma com dia e horário.`,`Na sexta, anote as três prioridades da segunda e feche o caderno.`,`Crie um ritual de domingo à noite que seja só seu, como um banho, uma leitura ou uma música.`],
+q:`O que exatamente pesa quando você pensa na segunda-feira?`},
+
+{id:'terapia',cat:'terapia',min:5,d:'tudo',t:`Medo de começar terapia?`,s:`Para quem adia por achar que é só desabafo, ou por não saber por onde começar.`,
+body:[
+`Muita gente adia a terapia por motivos que parecem razoáveis. Acha que o que sente não é grave o bastante, que não vai saber o que dizer, que é só desabafo e não muda nada. Ou acha que precisa estar no fundo do poço para merecer cuidado.`,
+`Você não precisa. A terapia existe para quem quer entender melhor a si mesma, atravessar uma fase difícil ou simplesmente parar de carregar tudo sozinha. Na primeira sessão, você pode chegar dizendo só: eu não sei por onde começar. Isso já é um começo.`,
+`>Você não precisa estar no fundo do poço para merecer cuidado.`,
+`A abordagem com que eu trabalho é a TCC, a terapia cognitivo-comportamental. Nela, a gente não fica só no desabafo. Você aprende a identificar os pensamentos que te derrubam, a perceber como eles influenciam o que você sente e faz, e a treinar novas formas de agir no dia a dia, com exercícios entre uma sessão e outra. Tudo isso com escuta cuidadosa da sua história, porque ninguém muda só com técnica.`,
+`No começo, é comum sentir um pouco de medo ou vergonha. Faz parte. A terapia é um espaço de sigilo, protegido pelo Código de Ética Profissional do Psicólogo, e você decide o ritmo do que quer contar.`],
+est:{x:`Em 2012, pesquisadores revisaram mais de cem meta-análises sobre a terapia cognitivo-comportamental. A conclusão foi que a base de evidências da TCC é forte, principalmente para ansiedade e estresse. Isso fala do que se encontrou em média nos estudos. Não é uma promessa de resultado para ninguém.`,ref:`Hofmann et al. (2012), Cognitive Therapy and Research`,url:`https://pmc.ncbi.nlm.nih.gov/articles/PMC3584580`},
+vida:`Adiar a terapia quase sempre significa continuar repetindo o mesmo padrão com mais cansaço. Procurar ajuda antes de uma crise dá mais espaço para você escolher o que quer mudar.`,
+pr:[`Anote três coisas que você gostaria que fossem diferentes na sua vida hoje.`,`Marque quais dessas você já tenta resolver sozinha há muito tempo.`,`Se fizer sentido, converse com uma psicóloga. Mandar uma mensagem já é uma forma de cuidado.`],
+q:`O que você tem medo de encontrar, ou de dizer, numa primeira sessão?`}
+];
+
+/* ---------- utilidades ---------- */
+const S={get(k,d){try{const v=localStorage.getItem('blog_'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('blog_'+k,JSON.stringify(v))}catch(e){}}};
+const pad=n=>String(n).padStart(2,'0');
+const idx=id=>P.findIndex(p=>p.id===id);
+const app=document.getElementById('app');
+const ORB='<svg class="orbit" aria-hidden="true"><use href="#orb"/></svg>';
+
+function ticket(p){
+  const i=idx(p.id),c=CATS[p.cat];
+  return `<a class="ticket ${c.c}" href="#post-${p.id}"><div class="top"><div class="label">${c.n}</div><div class="num">${pad(i+1)}<i></i>${pad(P.length)}</div><h3>${p.t}</h3><p>${p.s}</p>${ORB}</div><div class="stub"><span>${p.min} min de leitura</span><div class="barcode"></div></div></a>`;
+}
+
+/* ---------- páginas ---------- */
+function vHome(){
+  const ph=PHRASES[Math.floor(Date.now()/864e5)%PHRASES.length];
+  const themes=Object.keys(CATS).filter(k=>k!=='inicio').map(k=>{
+    const c=CATS[k],n=P.filter(p=>p.cat===k).length;
+    return `<a class="ticket ${c.c}" href="#tema-${k}"><div class="top"><div class="label">Tema</div><h3>${c.n}</h3><p>${c.x}</p>${ORB}</div><div class="stub"><span>${n} ${n===1?'texto':'textos'}</span><div class="barcode"></div></div></a>`;
+  }).join('');
+  return `<section class="view home">
+  <div class="wrap hero"><div class="hero-in">
+    <div class="hero-img" role="img" aria-label="Mallu Rios, psicóloga"></div>
+    <div class="hero-txt">
+      <div class="label" style="color:var(--sage)">Blog · Para mulheres sobrecarregadas</div>
+      <h1>Entre a mente e a vida real</h1>
+      <p>Textos curtos para mulheres cansadas de dar conta de tudo: sobrecarga, descanso, emoções, relações e autoestima. Com estudos de verdade e um exercício no fim de cada um para você aplicar ainda esta semana.</p>
+      <div class="meta"><i></i><span>Psicóloga · CRP 06/234141</span><i></i></div>
+      <div class="hero-btns"><a class="btn" href="#post-base">Ler o primeiro texto</a><a class="btn ghost" href="${TESTE}" target="_blank" rel="noopener">Fazer a reflexão de autoestima</a></div>
+    </div>
+  </div></div>
+
+  <div class="wrap">
+    <div class="sec"><h3>Comece por aqui</h3></div>
+    <div class="two">
+      ${ticket(P[0])}
+      <div class="ticket t-wine quote"><div class="top"><div class="label">Frase do dia</div><p class="qt">${ph}</p></div><div class="stub"><span>Entre a mente e a vida real</span><div class="barcode"></div></div></div>
+    </div>
+
+    <div class="sec"><h3>Textos recentes</h3><a href="#textos">Ver todos</a></div>
+    <div class="grid">${P.slice(1,7).map(ticket).join('')}</div>
+
+    <div class="sec"><h3>Por tema</h3></div>
+    <div class="grid">${themes}</div>
+
+    <div class="sec"><h3>Para ir além do texto</h3></div>
+    <div class="two">
+      <a class="ticket t-dark" href="${TESTE}" target="_blank" rel="noopener"><div class="top"><div class="label">App Pausa</div><h3>Onde sua autoestima tropeça?</h3><p>Dez frases para você se conhecer melhor e entender qual padrão mais pesa hoje.</p>${ORB}</div><div class="stub"><span>Abrir a reflexão</span><div class="barcode"></div></div></a>
+      <a class="ticket t-wine" href="${IG}" target="_blank" rel="noopener"><div class="top"><div class="label">Em breve</div><h3>Autoestima não nasce no espelho</h3><p>O curso e a apostila de autoestima estão sendo preparados. Quer entrar na lista de espera?</p>${ORB}</div><div class="stub"><span>Comente APOSTILA no Instagram</span><div class="barcode"></div></div></a>
+    </div>
+
+    <div class="teaser">
+      <img src="mallu.jpg" alt="Mallu Rios">
+      <div class="tx"><div class="label">Quem escreve</div><h3 style="margin-top:8px">Mallu Rios</h3><p>Psicóloga de mulheres cansadas de dar conta de tudo: sobrecarga, burnout, relações e autoestima.</p>
+        <div class="row"><a class="btn ghost" href="#sobre">Conhecer meu trabalho</a><a class="btn wa" href="${wa('Olá Mallu! Vim pelo blog e gostaria de agendar uma sessão.')}" target="_blank" rel="noopener">Agendar pelo WhatsApp</a></div></div>
+    </div>
+  </div></section>`;
+}
+
+function vList(cat){
+  const valid=cat&&CATS[cat]&&cat!=='inicio';
+  const chips=`<a href="#textos" class="${valid?'':'on'}">Todos</a>`+Object.keys(CATS).filter(k=>k!=='inicio').map(k=>`<a href="#tema-${k}" class="${cat===k?'on':''}">${CATS[k].n}</a>`).join('');
+  const list=P.filter(p=>!valid||p.cat===cat);
+  return `<section class="view"><div class="wrap">
+    <div class="page-head"><div class="label">${valid?'Tema':'Biblioteca'}</div><h2>${valid?CATS[cat].n:'Todos os textos'}</h2><p>${valid?CATS[cat].x:'Escolha um tema ou leia na ordem que fizer sentido para você hoje.'}</p></div>
+    <div class="chips">${chips}</div>
+    <div class="grid">${list.map(ticket).join('')}</div>
+  </div></section>`;
+}
+
+function vPost(id){
+  const i=idx(id);
+  if(i<0)return vList();
+  const p=P[i],c=CATS[p.cat],next=P[(i+1)%P.length],d=DIST[p.d];
+  const body=p.body.map(b=>b[0]==='>'?`<blockquote>${b.slice(1)}</blockquote>`:`<p>${b}</p>`).join('');
+  const est=p.est?`<div class="box estudo"><div class="label">O que a pesquisa diz</div><h3>Um estudo mostrou</h3><p>${p.est.x}</p><a class="ref" href="${p.est.url}" target="_blank" rel="noopener">${p.est.ref} ↗</a><p class="nota">Um estudo é uma pista, não uma regra para todas as pessoas.</p></div>`:'';
+  return `<section class="view"><div class="art">
+    <a class="back" href="#textos">← Todos os textos</a>
+    <div class="r-head"><div class="label">${c.n}</div><h1>${p.t}</h1><p class="sub">${p.s}</p>
+      <div class="r-meta"><img src="mallu.jpg" alt=""><span>Mallu Rios</span><span>·</span><span>${p.min} min de leitura</span></div></div>
+    <div class="r-body">${body}</div>
+    ${est}
+    <div class="box vida"><div class="label">Na vida real</div><h3>Como isso aparece na sua vida</h3><p>${p.vida}</p></div>
+    <div class="box card"><div class="label">Armadilha do pensamento</div><h3>${d.n}</h3><p>${d.o}</p>
+      <div class="ex"><b>Exemplo</b>${d.e}</div><p class="ask">${d.q}</p></div>
+    <div class="box card"><div class="label">Exercício</div><h3>Para praticar esta semana</h3>
+      ${p.pr.map((s,k)=>`<div class="step" data-k="${k}" role="checkbox" tabindex="0" aria-checked="false"><div class="ck">✓</div><p>${s}</p></div>`).join('')}</div>
+    <div class="box diario"><div class="label">Seu diário</div><h3>${p.q}</h3>
+      <textarea id="note" placeholder="Escreva com calma, sem se corrigir..." aria-label="Seu diário"></textarea>
+      <div class="saved-note" id="sn">Fica guardado só neste aparelho.</div></div>
+    <div class="box card"><div class="label">Compartilhe</div><h3>Mande para quem precisa ler</h3><p>Se esse texto lembrou de alguém, copie o link e envie.</p>
+      <div class="share"><input id="lnk" readonly aria-label="Link do texto"><button class="btn" id="cp" type="button">Copiar</button></div></div>
+    <div class="sec"><h3>Próximo texto</h3></div>
+    <div style="margin-top:16px">${ticket(next)}</div>
+    <div class="cta"><div class="label">Atendimento</div><h3>Quer olhar para isso com acompanhamento?</h3><p>O texto abre o caminho. A terapia ajuda a percorrê-lo com você.</p>
+      <a class="btn wa full" target="_blank" rel="noopener" href="${wa('Olá Mallu! Li "'+p.t.replace(/"/g,'')+'" no seu blog e gostaria de agendar uma sessão.')}">Agendar pelo WhatsApp</a></div>
+  </div></section>`;
+}
+
+function vSobre(){
+  return `<section class="view"><div class="wrap">
+    <div class="page-head"><div class="label">Sobre</div><h2>Quem escreve por aqui</h2></div>
+    <div class="about-grid">
+      <div class="about-hero"><img src="mallu.jpg" alt="Foto de Mallu Rios, psicóloga"><h2>Mallu Rios</h2><p class="crp" style="color:#fff;font-size:13px;margin-top:6px">Psicóloga · CRP 06/234141</p><p style="font-style:italic;font-size:13px;margin-top:6px">Entre a mente e a vida real</p></div>
+      <div style="display:grid;gap:16px">
+        <div class="card"><h3>Por que este blog</h3><p>Muitas mulheres acham que o problema é o trabalho, o relacionamento ou a ansiedade. E quase sempre, por baixo de tudo isso, existe uma relação difícil consigo mesma. Escrevo estes textos para você começar a cuidar dessa base, um de cada vez, com linguagem simples e com apoio de pesquisas.</p></div>
+        <div class="card"><h3>Como eu trabalho</h3><p>Minha abordagem é a TCC, a terapia cognitivo-comportamental. Ela parte de uma ideia simples: não é só o que acontece que define como você se sente, mas também o que você pensa sobre o que aconteceu. Quando você aprende a perceber e questionar esses pensamentos, a emoção e o comportamento também mudam. Tudo isso com escuta atenta da sua história.</p></div>
+        <div class="card"><h3>Temas que acompanho</h3><div class="pills"><span>Sobrecarga</span><span>Burnout</span><span>Regulação emocional</span><span>Relacionamentos</span><span>Dependência emocional</span><span>Autoestima</span><span>Autocuidado</span></div></div>
+        <div class="card"><h3>Informações importantes</h3><ul class="info">
+          <li><b>Agendamento:</b> pelo WhatsApp (11) 95823-4734. Me conte um pouco do que você busca e combinamos o melhor horário.</li>
+          <li><b>Sigilo:</b> tudo o que é dito em sessão é protegido pelo Código de Ética Profissional do Psicólogo.</li>
+          <li><b>Urgências:</b> a terapia não é um serviço de emergência. Em situação de crise, ligue para o CVV 188 ou o SAMU 192.</li></ul></div>
+        <a class="btn wa full" style="margin-top:0" target="_blank" rel="noopener" href="${wa('Olá Mallu! Vim pelo blog e gostaria de agendar uma sessão.')}">Agendar pelo WhatsApp</a>
+        <a class="btn ghost full" style="margin-top:0" target="_blank" rel="noopener" href="${IG}">Me acompanhe no @mallu_rios</a>
+      </div>
+    </div>
+  </div></section>`;
+}
+
+/* ---------- navegação por hash ---------- */
+let curPost=null;
+function route(){
+  const h=(location.hash||'#inicio').slice(1);
+  let v='inicio',html;
+  if(h.indexOf('post-')===0){v='post';curPost=h.slice(5);html=vPost(curPost)}
+  else if(h.indexOf('tema-')===0){v='textos';html=vList(h.slice(5))}
+  else if(h==='textos'){v='textos';html=vList()}
+  else if(h==='sobre'){v='sobre';html=vSobre()}
+  else{html=vHome()}
+  app.innerHTML=html;
+  document.body.dataset.v=v;
+  document.querySelectorAll('[data-r]').forEach(a=>a.classList.toggle('on',a.dataset.r===v||(v==='post'&&a.dataset.r==='textos')));
+  if(v==='post')initPost();
+  window.scrollTo(0,0);prog();
+}
+function initPost(){
+  const id=curPost,steps=S.get('steps',{}),notes=S.get('notes',{}),done=steps[id]||[];
+  app.querySelectorAll('.step').forEach(el=>{
+    const k=+el.dataset.k;
+    if(done.indexOf(k)>-1){el.classList.add('on');el.setAttribute('aria-checked','true')}
+  });
+  const note=document.getElementById('note');
+  if(note)note.value=notes[id]||'';
+  const lnk=document.getElementById('lnk');
+  if(lnk)lnk.value=location.href;
+}
+app.addEventListener('click',e=>{
+  const st=e.target.closest('.step');
+  if(st)toggleStep(st);
+  if(e.target.id==='cp')copyLink(e.target);
+});
+app.addEventListener('keydown',e=>{
+  if((e.key===' '||e.key==='Enter')&&e.target.classList&&e.target.classList.contains('step')){e.preventDefault();toggleStep(e.target)}
+});
+function toggleStep(el){
+  const steps=S.get('steps',{}),a=steps[curPost]||[],k=+el.dataset.k,p=a.indexOf(k);
+  p<0?a.push(k):a.splice(p,1);
+  steps[curPost]=a;S.set('steps',steps);
+  const on=el.classList.toggle('on');el.setAttribute('aria-checked',on?'true':'false');
+}
+let nt;
+app.addEventListener('input',e=>{
+  if(e.target.id!=='note')return;
+  const v=e.target.value;clearTimeout(nt);
+  nt=setTimeout(()=>{const n=S.get('notes',{});n[curPost]=v;S.set('notes',n);const sn=document.getElementById('sn');if(sn)sn.textContent='Salvo. Fica guardado só neste aparelho.'},500);
+});
+function copyLink(btn){
+  const inp=document.getElementById('lnk');
+  const fallback=()=>{inp.focus();inp.select();btn.textContent='Selecionado'};
+  try{
+    navigator.clipboard.writeText(inp.value).then(()=>{btn.textContent='Copiado ✓';setTimeout(()=>btn.textContent='Copiar',2000)},fallback);
+  }catch(err){fallback()}
+}
+function prog(){
+  const on=document.body.dataset.v==='post';
+  const h=document.documentElement.scrollHeight-innerHeight;
+  document.getElementById('prog').style.width=on&&h>0?(scrollY/h*100)+'%':'0';
+}
+addEventListener('scroll',prog,{passive:true});
+addEventListener('hashchange',route);
+route();
+</script>
+
+</body></html>
