@@ -14,7 +14,7 @@
    PICTURE: o retrato da Mallu na poltrona vinho, grande, saindo do escuro, com o convite ao lado
    COLOUR and TYPE: quase-preto quente dominante, vinho #2A2622 de apoio, azul-névoa #2C4A60 como acento; Lora itálico + Poppins (as mesmas do app Pausa)
    LAYOUT: cabeçalho fixo; hero em duas colunas; faixas alternando escuro e papel; perguntas em acordeão; rodapé com CRP */
-:root{color-scheme:light;--bg:#FBF6EA;--card:#FFFFFF;--ink:#2A2622;--soft:#6B6259;--line:#E6DCC6;--wine:#2A2622;--wine2:#A0740C;--rose:#A0740C;--mist:#2C4A60;--paper:#F7EAC0;--pink:#2A2622;--green:#3BB873}
+:root{color-scheme:light;--bg:#FBF6EA;--card:#FFFFFF;--ink:#2A2622;--soft:#6B6259;--line:#E6DCC6;--wine:#2A2622;--wine2:#A0740C;--rose:#A0740C;--mist:#2C4A60;--paper:#F5C518;--pink:#2A2622;--green:#F5C518}
 :root[data-theme=light],:root[data-theme=dark]{color-scheme:light}
 *{box-sizing:border-box;min-width:0;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
@@ -122,7 +122,7 @@ html,body{background:var(--bg)!important;color:var(--ink)}
 *{text-transform:none!important;letter-spacing:normal!important}
 .ticket .stub span{font-size:13px!important;font-style:italic}
 .ticket .top p{border-left:none!important;padding-left:0!important}
-.ticket .stub{border-top:1px solid rgba(42,38,34,.12)!important}
+.ticket .stub{border-top:1.5px dashed rgba(42,38,34,.25)!important}
 .badge b,.badge strong{color:var(--ink)!important}
 :root{color-scheme:light}
 h1,h2,h3,h4{font-family:'Lora',Georgia,serif!important;font-style:normal!important;font-weight:500!important;letter-spacing:-.01em}
@@ -133,9 +133,13 @@ body,p,a,button,li,span,input,textarea,label,dd,dt{font-family:'Lora',Georgia,se
 .tb-r,.meta,.meta span{color:var(--soft)!important;text-transform:none!important;letter-spacing:.02em!important}
 .crp,.note b,.foot b,.foot .crp{color:var(--ink)!important}
 .sec a{text-transform:none!important;letter-spacing:0!important;font-size:14px!important;font-style:italic}
-.ticket,.eb{-webkit-mask:none!important;mask:none!important}
+
 .meta i{background:var(--line)!important}
 
+.btn.wa{background:#F5C518!important;color:#2A2622!important}
+.paper{background:#FFF4CC!important}
+.card.w{background:#E0533B!important}.card.b{background:#3A6FD8!important}.card.b h3,.card.b p,.card.b .go{color:#fff!important}.card.b .eyebrow{color:#FFE9A8!important}
+.photo img{object-position:42% 12%!important}
 nav.top a:hover{background:#F3ECDC}
 .badge{color:#2A2622!important}
 .photo{box-shadow:0 20px 50px rgba(60,45,20,.15)!important}
@@ -160,7 +164,7 @@ nav.top a:hover{background:#F3ECDC}
   <section class="band" style="padding-bottom:clamp(48px,6vw,80px)">
     <div class="wrap hero">
       <div>
-        <div class="eyebrow">Psicóloga clínica · Terapia online</div>
+        <div class="eyebrow">Psicóloga clínica · Terapia online em português e espanhol</div>
         <h1>Para quem está <em>cansada de dar conta de tudo</em></h1>
         <p class="lead">Um espaço de escuta e acolhimento para entender o que você sente, aliviar o que não precisa ser só seu e construir uma relação mais gentil consigo mesma.</p>
         <div class="cta-row">
@@ -171,7 +175,7 @@ nav.top a:hover{background:#F3ECDC}
       </div>
       <div class="photo">
         <img src="hero.jpg" alt="Mallu Rios, psicóloga, sentada em uma poltrona vinho, sorrindo">
-        <div class="badge"><b>Atendimento online</b>Para todo o Brasil</div>
+        <div class="badge"><b>Atendimento online</b>Em português e espanhol</div>
       </div>
     </div>
   </section>

@@ -18,8 +18,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#FBF6EA; --card:#FFFFFF; --ink:#2A2622; --soft:#6B6259; --paper:#F7EAC0; --paper-ink:#2A2622;
-    --wine:#2A2622; --wine-l:#8A6512; --blue:#DDE7EE; --blue-ink:#2C4A60; --sage:#2C4A60; --line:#E6DCC6; --green:#3BB873;
+    --bg:#FBF6EA; --card:#FFFFFF; --ink:#2A2622; --soft:#6B6259; --paper:#F5C518; --paper-ink:#2A2622;
+    --wine:#2A2622; --wine-l:#8A6512; --blue:#3A6FD8; --blue-ink:#2C4A60; --sage:#2C4A60; --line:#E6DCC6; --green:#F5C518;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'Lora',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:flex;justify-content:center}
@@ -223,7 +223,7 @@ html,body{background:var(--bg)!important;color:var(--ink)}
 *{text-transform:none!important;letter-spacing:normal!important}
 .ticket .stub span{font-size:13px!important;font-style:italic}
 .ticket .top p{border-left:none!important;padding-left:0!important}
-.ticket .stub{border-top:1px solid rgba(42,38,34,.12)!important}
+.ticket .stub{border-top:1.5px dashed rgba(42,38,34,.25)!important}
 .badge b,.badge strong{color:var(--ink)!important}
 :root{color-scheme:light}
 h1,h2,h3,h4{font-family:'Lora',Georgia,serif!important;font-style:normal!important;font-weight:500!important;letter-spacing:-.01em}
@@ -234,24 +234,39 @@ body,p,a,button,li,span,input,textarea,label,dd,dt{font-family:'Lora',Georgia,se
 .tb-r,.meta,.meta span{color:var(--soft)!important;text-transform:none!important;letter-spacing:.02em!important}
 .crp,.note b,.foot b,.foot .crp{color:var(--ink)!important}
 .sec a{text-transform:none!important;letter-spacing:0!important;font-size:14px!important;font-style:italic}
-.ticket,.eb{-webkit-mask:none!important;mask:none!important}
+
 .meta i{background:var(--line)!important}
 
-.ticket .num,.ticket .orbit,.barcode,.orbit{display:none!important}
+
+/* cores vivas nos cartões */
+.t-wine,.quote{background:#E0533B!important}
+.t-wine h3,.t-wine .barcode,.quote p,.t-wine p,.t-wine .num,.t-wine .stub span{color:#FFFFFF!important}
+.t-wine .label,.quote .label{color:#FFE9A8!important}
+.t-wine .stub{border-color:rgba(255,255,255,.45)!important}
+.t-paper{background:#F5C518!important}
+.t-paper h3,.t-paper p,.t-paper .stub span,.t-paper .label,.t-paper .num,.t-paper .barcode{color:#2A2622!important}
+.t-paper .stub{border-color:rgba(42,38,34,.3)!important}
+.t-blue{background:#3A6FD8!important}
+.t-blue h3,.t-blue p,.t-blue .stub span,.t-blue .num,.t-blue .barcode{color:#FFFFFF!important}
+.t-blue .label{color:#FFE9A8!important}
+.t-blue .stub{border-color:rgba(255,255,255,.4)!important}
+.box.vida{background:#3A6FD8!important}.box.vida p,.box.vida h3{color:#fff!important}.box.vida .label{color:#FFE9A8!important}
+.btn.wa{background:#F5C518!important;color:#2A2622!important}
+.btn.wa:hover{background:#E8B70A!important}
+.box.eb-box{background:#FFF4CC!important}
+.ticket .orbit,.orbit{display:none!important}
+.barcode{opacity:.35!important}
 .ticket{box-shadow:none!important;border:1px solid var(--line)}
-.ticket .stub{border-top:1px solid var(--line)!important}
 .ticket .stub span{text-transform:none!important;letter-spacing:0!important;font-size:13px!important;font-style:italic}
 .ticket .top p{border-left:none!important;padding-left:0!important}
 .ticket h3{max-width:100%!important;font-size:22px!important}
-.t-wine{background:#2A2622!important}
 .t-dark{background:#FFFFFF!important}
-.hero-img{height:330px!important;margin:112px 44px 0!important;border-radius:200px 200px 24px 24px!important;background:url(hero.jpg) center 12%/cover no-repeat!important}
+.hero-img{height:330px!important;margin:112px 44px 0!important;border-radius:200px 200px 24px 24px!important;background:url(hero.jpg) 42% 12%/cover no-repeat!important}
 .hero-img::after{display:none!important}
 .hero-txt{margin-top:22px!important}
 nav{border:1px solid var(--line)!important;box-shadow:0 8px 24px rgba(60,45,20,.12)!important}
 nav button.on{color:#FBF6EA!important}
 .r-body p:first-child::first-letter{font-style:normal!important;font-family:'Lora',Georgia,serif!important}
-.quote{background:#2A2622!important}
 .cta{background:#2A2622!important}
 .btn.ghost{color:var(--ink)!important}
 .box.eb-box{background:#F6E3A8!important}
