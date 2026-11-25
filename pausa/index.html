@@ -287,6 +287,20 @@ nav button.on{color:#FBF6EA!important}
 .bg-bule h3,.bg-bule p,.bg-bule .qt,.bg-bule .stub span,.bg-bule .num,.bg-bule .barcode{color:#2A2622!important}.bg-bule .label{color:#8A6512!important}.bg-bule .stub{border-color:rgba(42,38,34,.3)!important}
 .ticket[class*='bg-'] .num,.ticket[class*='bg-'] .barcode{display:none!important}.ticket h3{max-width:62%!important}.ticket .top p{max-width:58%!important}
 .hero-img{background-image:url(/img/foto-centro.jpg)!important;background-position:center 10%!important}
+
+/* moldura nova da foto: ticket editorial */
+.ph-tk{margin:0 auto;width:min(300px,78vw);filter:drop-shadow(0 18px 30px rgba(60,45,20,.16))}
+.ph-in{position:relative;background:#fff;border-radius:22px;padding:10px 10px 0;
+ -webkit-mask:radial-gradient(circle 12px at 0 calc(100% - 66px),#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% calc(100% - 66px),#0000 98%,#000) right/51% 100% no-repeat;
+ mask:radial-gradient(circle 12px at 0 calc(100% - 66px),#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% calc(100% - 66px),#0000 98%,#000) right/51% 100% no-repeat}
+.ph-img{aspect-ratio:4/5;border-radius:15px;background:url(/img/foto-centro.jpg) center 14%/cover no-repeat,#2A2622}
+.ph-tag{position:absolute;top:22px;right:22px;background:#F5C518;color:#2A2622;font:italic 500 12.5px 'Lora',Georgia,serif;padding:6px 12px;border-radius:99px;letter-spacing:0}
+.ph-stub{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1.5px dashed #E6DCC6;margin:12px -10px 0;padding:13px 20px 15px;height:64px;box-sizing:border-box;text-align:left}
+.ph-stub b{display:block;font:600 16px/1.2 'Lora',Georgia,serif;color:#2A2622}
+.ph-stub span{font:italic 12.5px 'Lora',Georgia,serif;color:#6B6259}
+.ph-stub em{font:italic 500 13px 'Lora',Georgia,serif;color:#fff;background:#3A6FD8;padding:5px 11px;border-radius:99px}
+.ph-wrap{padding:96px 0 0}
+.hero-txt{margin-top:26px!important}
 </style>
 </head>
 <body>
@@ -303,7 +317,7 @@ nav button.on{color:#FBF6EA!important}
   <!-- INÍCIO -->
   <section class="view on" id="v-home">
     <div class="hero">
-      <div class="hero-img"></div>
+      <div class="ph-wrap"><figure class="ph-tk"><div class="ph-in"><div class="ph-img" role="img" aria-label="Mallu Rios, psicóloga, sorrindo"></div><span class="ph-tag">Pausa</span><div class="ph-stub"><div><b>Mallu Rios</b><span>Psicóloga · CRP 06/234141</span></div><em>TCC</em></div></div></figure></div>
       <div class="hero-txt">
         <div class="label" style="color:var(--sage)">Pausa · Autocuidado e leituras</div>
         <h1>Mallu Rios</h1>
